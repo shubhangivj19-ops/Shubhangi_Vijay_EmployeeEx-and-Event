@@ -1,0 +1,1512 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shubhangi Vijay — Senior HR Operations Specialist</title>
+  <meta name="description" content="Executive Portfolio of Shubhangi Vijay — Senior Associate HR Operations Specialist with expertise in APAC/NA/EMEA People Operations, HRIS, Automation & AI.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Chart.js for Live HR Analytics -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              black: '#08070d',
+              card: '#0f0d1a',
+              cardHover: '#161326',
+              purple: '#7e22ce',
+              brightPurple: '#a855f7',
+              lightPurple: '#c084fc',
+              accent: '#3b82f6',
+              border: 'rgba(168, 85, 247, 0.2)',
+              borderLight: 'rgba(255, 255, 255, 0.08)'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace']
+          },
+          animation: {
+            'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'float': 'float 6s ease-in-out infinite'
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-10px)' }
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS for Glow Effects & Premium Dark Styling -->
+  <style>
+    :root {
+      --primary-dark: #08070d;
+      --surface: #0f0d1a;
+      --surface-hover: #171429;
+      --primary-glow: rgba(168, 85, 247, 0.25);
+      --primary-bright: #a855f7;
+      --accent: #3b82f6;
+      --text-main: #f3f4f6;
+      --text-muted: #9ca3af;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    body {
+      background-color: var(--primary-dark);
+      color: var(--text-main);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* Ambient background gradient glow */
+    .bg-ambient-glow {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background: 
+        radial-gradient(circle at 15% 20%, rgba(126, 34, 206, 0.18) 0%, transparent 40%),
+        radial-gradient(circle at 85% 60%, rgba(59, 130, 246, 0.12) 0%, transparent 45%),
+        radial-gradient(circle at 50% 90%, rgba(168, 85, 247, 0.1) 0%, transparent 50%);
+    }
+
+    .glass-card {
+      background: rgba(15, 13, 26, 0.82);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(168, 85, 247, 0.2);
+      transition: var(--transition);
+    }
+
+    .glass-card:hover {
+      background: rgba(23, 20, 41, 0.9);
+      border-color: rgba(168, 85, 247, 0.45);
+      box-shadow: 0 12px 30px -10px rgba(126, 34, 206, 0.35);
+      transform: translateY(-4px);
+    }
+
+    .glass-card-static {
+      background: rgba(15, 13, 26, 0.82);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(168, 85, 247, 0.2);
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #08070d;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #3b0764;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #a855f7;
+    }
+
+    /* Hero Avatar Frame with Precise Circular Crop */
+    .hero-avatar-frame {
+      position: relative;
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      overflow: hidden;
+      padding: 0;
+      background: #0f0d1a;
+      box-shadow: 0 0 50px rgba(168, 85, 247, 0.4);
+      transition: var(--transition);
+    }
+
+    @media (min-width: 768px) {
+      .hero-avatar-frame {
+        width: 330px;
+        height: 330px;
+      }
+    }
+
+    .hero-avatar-frame:hover {
+      box-shadow: 0 0 70px rgba(168, 85, 247, 0.65), 0 0 30px rgba(59, 130, 246, 0.45);
+      transform: scale(1.02);
+    }
+
+    .hero-avatar-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 50%;
+    }
+
+    /* Tab navigation pills */
+    .nav-tab-btn.active {
+      background: linear-gradient(135deg, #7e22ce, #a855f7);
+      color: #ffffff;
+      box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
+    }
+  </style>
+</head>
+<body class="min-h-screen text-slate-100 relative selection:bg-purple-600 selection:text-white">
+
+  <div class="bg-ambient-glow"></div>
+
+  <!-- NAVIGATION HEADER -->
+  <header class="sticky top-0 z-50 backdrop-blur-xl bg-brand-black/85 border-b border-purple-900/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo / Title -->
+      <a href="#hero" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-purple-700 to-indigo-500 flex items-center justify-center text-white font-bold text-lg shadow-lg shadow-purple-900/50 group-hover:scale-105 transition-transform">
+          SV
+        </div>
+        <div class="flex flex-col">
+          <span class="font-bold tracking-tight text-white group-hover:text-purple-300 transition-colors">SHUBHANGI VIJAY</span>
+          <span class="text-xs text-purple-400 font-mono">Senior HR Operations Specialist</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center gap-1 bg-brand-card/80 p-1.5 rounded-full border border-purple-500/20 shadow-inner">
+        <a href="#about" class="px-4 py-2 text-xs font-semibold text-slate-300 hover:text-white hover:bg-purple-900/30 rounded-full transition-all">About</a>
+        <a href="#regions" class="px-4 py-2 text-xs font-semibold text-slate-300 hover:text-white hover:bg-purple-900/30 rounded-full transition-all">Regions</a>
+        <a href="#experience" class="px-4 py-2 text-xs font-semibold text-slate-300 hover:text-white hover:bg-purple-900/30 rounded-full transition-all">Experience</a>
+        <a href="#projects" class="px-4 py-2 text-xs font-semibold text-slate-300 hover:text-white hover:bg-purple-900/30 rounded-full transition-all">Projects & AI</a>
+        <a href="#skills" class="px-4 py-2 text-xs font-semibold text-slate-300 hover:text-white hover:bg-purple-900/30 rounded-full transition-all">Skills</a>
+        <a href="#dei" class="px-4 py-2 text-xs font-semibold text-slate-300 hover:text-white hover:bg-purple-900/30 rounded-full transition-all">DEI & Community</a>
+        <a href="#certifications" class="px-4 py-2 text-xs font-semibold text-slate-300 hover:text-white hover:bg-purple-900/30 rounded-full transition-all">Certificates</a>
+        <a href="#contact" class="px-4 py-2 text-xs font-semibold bg-purple-600 hover:bg-purple-500 text-white rounded-full transition-all shadow-lg shadow-purple-900/40">Contact</a>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobileMenuBtn" class="md:hidden p-2 text-slate-300 hover:text-white focus:outline-none" aria-label="Toggle Navigation Menu">
+        <i class="fa-solid fa-bars text-xl"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobileMenu" class="hidden md:hidden border-b border-purple-900/40 bg-brand-card px-6 py-4 space-y-3">
+      <a href="#about" class="block text-sm text-slate-300 hover:text-purple-300 py-1">About</a>
+      <a href="#regions" class="block text-sm text-slate-300 hover:text-purple-300 py-1">Regions</a>
+      <a href="#experience" class="block text-sm text-slate-300 hover:text-purple-300 py-1">Experience</a>
+      <a href="#projects" class="block text-sm text-slate-300 hover:text-purple-300 py-1">Projects & AI Agent</a>
+      <a href="#skills" class="block text-sm text-slate-300 hover:text-purple-300 py-1">Skills & HRIS Stack</a>
+      <a href="#dei" class="block text-sm text-slate-300 hover:text-purple-300 py-1">DEI & Community</a>
+      <a href="#certifications" class="block text-sm text-slate-300 hover:text-purple-300 py-1">Certifications</a>
+      <a href="#contact" class="block text-sm text-purple-400 font-semibold py-1">Contact Me</a>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="hero" class="relative pt-12 pb-20 lg:pt-20 lg:pb-32 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Hero Text & Headline (Static 2-Line Headline) -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          
+          <!-- Availability Badge -->
+          <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full glass-card-static border-purple-500/30 text-purple-300 text-xs font-semibold uppercase tracking-wider">
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 absolute"></span>
+            <span class="pl-3">Available for HR Operations Leadership Opportunities</span>
+          </div>
+
+          <!-- Headline Split into Two Distinct Lines -->
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight">
+            <span class="block text-white">SHUBHANGI VIJAY</span>
+            <span class="block text-purple-400 text-2xl sm:text-3xl lg:text-4xl mt-2 font-bold">Senior HR Operations Specialist</span>
+          </h1>
+
+          <!-- Sub-headline -->
+          <p class="text-base sm:text-lg text-slate-300 max-w-2xl font-normal leading-relaxed mx-auto lg:mx-0">
+            Senior People Operations leader with <span class="text-purple-300 font-semibold">10+ years of enterprise experience</span> across <span class="text-purple-300 font-semibold">APAC, NA, and EMEA</span>. Specialized in employee lifecycle governance, HRIS administration (ADP, Workday, Salesforce), M365 Copilot AI automations, and multi-jurisdictional compliance.
+          </p>
+
+          <!-- CTAs with Working Direct Resume Attachment -->
+          <div class="pt-4 flex flex-wrap gap-3 justify-center lg:justify-start items-center">
+            <a id="downloadResumeBtn" href="Shubhangi_Vijay_Operations Specialist.pdf" download="Shubhangi_Vijay_Resume.pdf" class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-purple-700 via-purple-600 to-indigo-600 hover:from-purple-600 hover:to-indigo-500 text-white font-semibold text-sm shadow-xl shadow-purple-900/50 flex items-center gap-2 hover:scale-105 transition-all">
+              <i class="fa-solid fa-file-arrow-down"></i>
+              <span>Download Official Resume</span>
+            </a>
+            
+            <a href="https://linkedin.com/in/shubhangivijay-584530217" target="_blank" rel="noopener" class="px-5 py-3.5 rounded-xl glass-card text-purple-300 hover:text-white font-semibold text-sm flex items-center gap-2 border-purple-500/30 hover:border-purple-400">
+              <i class="fa-brands fa-linkedin text-lg text-purple-400"></i>
+              <span>LinkedIn Profile</span>
+            </a>
+
+            <a href="#contact" class="px-5 py-3.5 rounded-xl glass-card text-slate-300 hover:text-white font-semibold text-sm flex items-center gap-2 border-slate-700 hover:border-purple-500/50">
+              <i class="fa-solid fa-envelope text-purple-400"></i>
+              <span>Get In Touch</span>
+            </a>
+          </div>
+
+          <!-- Quick Metric Badges -->
+          <div class="pt-6 grid grid-cols-3 gap-4 border-t border-purple-900/30 max-w-xl mx-auto lg:mx-0">
+            <div class="text-center lg:text-left">
+              <div class="text-2xl font-bold text-white">10+ Yrs</div>
+              <div class="text-xs text-purple-300/80 uppercase font-mono mt-0.5">HR Operations</div>
+            </div>
+            <div class="text-center lg:text-left">
+              <div class="text-2xl font-bold text-white">APAC / NA / EMEA</div>
+              <div class="text-xs text-purple-300/80 uppercase font-mono mt-0.5">Global Regions</div>
+            </div>
+            <div class="text-center lg:text-left">
+              <div class="text-2xl font-bold text-white">3 Months</div>
+              <div class="text-xs text-purple-300/80 uppercase font-mono mt-0.5">Fast Promotion</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Hero Headshot Photograph Column -->
+        <div class="lg:col-span-5 flex justify-center relative">
+          <div class="relative group">
+            
+            <!-- Glowing Aura Backdrop -->
+            <div class="absolute -inset-4 rounded-full bg-gradient-to-tr from-purple-600 via-indigo-600 to-purple-400 blur-2xl opacity-40 group-hover:opacity-75 transition duration-1000 animate-pulse-slow"></div>
+
+            <!-- Avatar Container with Precise Circular Mapping -->
+            <div class="hero-avatar-frame relative">
+              <img 
+                id="heroAvatarImg" 
+                src="ChatGPT Image Jul 23, 2026, 07_06_01 PM.png" 
+                alt="Shubhangi Vijay — Senior HR Operations Specialist" 
+                onerror="this.onerror=null; this.src='Headshot.jpg'; this.onerror=function(){this.style.display='none'; document.getElementById('headshotFallback').style.display='flex';};"
+              >
+              <div id="headshotFallback" style="display:none;" class="absolute inset-0 flex flex-col items-center justify-center bg-brand-black text-purple-300">
+                <i class="fa-solid fa-user-tie text-5xl mb-2 text-purple-400"></i>
+                <span class="text-xs font-mono font-bold tracking-wider">SHUBHANGI VIJAY</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about" class="py-16 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="glass-card rounded-3xl p-8 sm:p-12 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-purple-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="flex items-center gap-3 mb-6">
+          <span class="text-purple-400 font-mono text-xs uppercase tracking-widest">// Executive Overview</span>
+          <div class="h-px bg-purple-900/50 flex-grow"></div>
+        </div>
+
+        <h2 class="text-2xl sm:text-3xl font-bold text-white mb-6">About Shubhangi Vijay</h2>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-8 space-y-4 text-slate-300 leading-relaxed">
+            <p class="text-base sm:text-lg">
+              I am an <strong class="text-white font-semibold">HR Operations Specialist with 10+ years of progressive experience</strong> overseeing end-to-end People Operations, employee lifecycle governance, and HRIS administration across multinational ecosystems in <strong class="text-purple-300">APAC, NA, and EMEA</strong>.
+            </p>
+            <p class="text-slate-300">
+              My expertise bridges strategic human touchpoints with modern technical efficiency. From managing pre-boarding, onboarding logistics, probation tracking, promotions, and offboarding, to building workflow automations in Power Automate and configuring M365 Copilot AI agents, I focus on delivering seamless employee experiences backed by airtight compliance and data integrity.
+            </p>
+            <p class="text-slate-300">
+              Throughout my tenure at <strong class="text-white">Spaulding Ridge</strong> and <strong class="text-white">Samaksh Enterprises</strong>, I have spearheaded regional process improvements, managed open HR ticketing across Salesforce and FinancialForce, and led DE&I and community initiatives that foster vibrant workplace cultures.
+            </p>
+          </div>
+
+          <!-- Quick Fact Matrix -->
+          <div class="lg:col-span-4 space-y-4">
+            <div class="p-4 rounded-2xl bg-brand-black/60 border border-purple-500/20">
+              <span class="text-xs font-mono text-purple-400 uppercase">Primary Hub</span>
+              <p class="text-sm font-semibold text-white mt-1">Pune, Maharashtra, India</p>
+            </div>
+            <div class="p-4 rounded-2xl bg-brand-black/60 border border-purple-500/20">
+              <span class="text-xs font-mono text-purple-400 uppercase">Core HRIS Systems</span>
+              <p class="text-sm font-semibold text-white mt-1">ADP Workforce Now, Salesforce HRIS, Workday, FinancialForce, Greenhouse, Lattice</p>
+            </div>
+            <div class="p-4 rounded-2xl bg-brand-black/60 border border-purple-500/20">
+              <span class="text-xs font-mono text-purple-400 uppercase">AI & Automation</span>
+              <p class="text-sm font-semibold text-white mt-1">M365 Copilot, Power Automate, Zapier, RAG Analytics Dashboards</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- REGIONAL OPERATIONS SECTION -->
+  <section id="regions" class="py-16 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="mb-10 text-center lg:text-left">
+        <span class="text-purple-400 font-mono text-xs uppercase tracking-widest">// Global Reach</span>
+        <h2 class="text-3xl font-bold text-white mt-2">Regional Operations & Stakeholder Management</h2>
+        <p class="text-slate-400 text-sm max-w-2xl mt-1">Comprehensive cross-border HR operations across APAC, North America, and EMEA jurisdictions.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- APAC Region Card -->
+        <div class="glass-card rounded-3xl p-6 flex flex-col justify-between relative overflow-hidden border-purple-500/30">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="w-10 h-10 rounded-2xl bg-purple-900/60 border border-purple-500/40 flex items-center justify-center text-purple-300 font-bold text-sm">
+                01
+              </span>
+              <span class="px-3 py-1 rounded-full text-[10px] font-mono uppercase bg-purple-900/40 text-purple-300 border border-purple-500/30">Primary Operational Hub</span>
+            </div>
+            
+            <h3 class="text-xl font-bold text-white mb-2">APAC Region</h3>
+            <p class="text-xs text-purple-300 font-mono mb-4">India, Philippines & Singapore</p>
+            
+            <ul class="space-y-2.5 text-xs text-slate-300">
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-circle-check text-purple-400 mt-0.5"></i>
+                <span>End-to-end onboarding & pre-boarding for 80+ annual technical hires.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-circle-check text-purple-400 mt-0.5"></i>
+                <span>Multi-jurisdictional compliance, joining formalities, and HRIS data governance.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-circle-check text-purple-400 mt-0.5"></i>
+                <span>Region-specific onboarding checklists reducing turnaround time by 30%.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-circle-check text-purple-400 mt-0.5"></i>
+                <span>100+ annual employee check-ins for retention risk mitigation.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-purple-900/40 flex items-center justify-between text-slate-400 text-xs">
+            <span>Jurisdictions:</span>
+            <span class="text-white font-semibold">India · Philippines · Singapore</span>
+          </div>
+        </div>
+
+        <!-- NA Region Card -->
+        <div class="glass-card rounded-3xl p-6 flex flex-col justify-between relative overflow-hidden border-purple-500/30">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="w-10 h-10 rounded-2xl bg-indigo-900/60 border border-indigo-500/40 flex items-center justify-center text-indigo-300 font-bold text-sm">
+                02
+              </span>
+              <span class="px-3 py-1 rounded-full text-[10px] font-mono uppercase bg-indigo-900/40 text-indigo-300 border border-indigo-500/30">Cross-Border Operations</span>
+            </div>
+            
+            <h3 class="text-xl font-bold text-white mb-2">North America (NA)</h3>
+            <p class="text-xs text-indigo-300 font-mono mb-4">United States & Canada</p>
+            
+            <ul class="space-y-2.5 text-xs text-slate-300">
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-circle-check text-indigo-400 mt-0.5"></i>
+                <span>Executive & cross-functional stakeholder management (IT, Finance, Leadership).</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-circle-check text-indigo-400 mt-0.5"></i>
+                <span>Performance evaluation coordination, Lattice administration, and cycle management.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-circle-check text-indigo-400 mt-0.5"></i>
+                <span>Comprehensive leave audit, PTO policy governance, and timecard synchronization.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-circle-check text-indigo-400 mt-0.5"></i>
+                <span>ADP Workforce Now data hygiene and compensation memorandum updates.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-purple-900/40 flex items-center justify-between text-slate-400 text-xs">
+            <span>Jurisdictions:</span>
+            <span class="text-white font-semibold">US · Canada</span>
+          </div>
+        </div>
+
+        <!-- EMEA Region Card -->
+        <div class="glass-card rounded-3xl p-6 flex flex-col justify-between relative overflow-hidden border-purple-500/30">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="w-10 h-10 rounded-2xl bg-purple-900/60 border border-purple-500/40 flex items-center justify-center text-purple-300 font-bold text-sm">
+                03
+              </span>
+              <span class="px-3 py-1 rounded-full text-[10px] font-mono uppercase bg-purple-900/40 text-purple-300 border border-purple-500/30">Global Operations</span>
+            </div>
+            
+            <h3 class="text-xl font-bold text-white mb-2">EMEA Region</h3>
+            <p class="text-xs text-purple-300 font-mono mb-4">UK & European Operations</p>
+            
+            <ul class="space-y-2.5 text-xs text-slate-300">
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-circle-check text-purple-400 mt-0.5"></i>
+                <span>Strategic stakeholder management across regional practice leaders.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-circle-check text-purple-400 mt-0.5"></i>
+                <span>Structured performance evaluation administration and appraisal review cycles.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-circle-check text-purple-400 mt-0.5"></i>
+                <span>Leave audit and policy compliance oversight across European statutory standards.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-circle-check text-purple-400 mt-0.5"></i>
+                <span>Global inquiry resolution via Salesforce and FinancialForce ticketing systems.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-purple-900/40 flex items-center justify-between text-slate-400 text-xs">
+            <span>Jurisdictions:</span>
+            <span class="text-white font-semibold">UK · EU Markets</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENTS SECTION -->
+  <section id="achievements" class="py-16 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="mb-10 text-center lg:text-left">
+        <span class="text-purple-400 font-mono text-xs uppercase tracking-widest">// Recognized Excellence</span>
+        <h2 class="text-3xl font-bold text-white mt-2">Career Achievements & Organizational Recognition</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Achievement 1: Promotion -->
+        <div class="glass-card rounded-3xl p-6 border-purple-500/30 relative">
+          <div class="w-12 h-12 rounded-2xl bg-purple-900/80 border border-purple-400/50 flex items-center justify-center text-purple-300 text-xl mb-4">
+            <i class="fa-solid fa-bolt"></i>
+          </div>
+          <span class="text-xs font-mono text-purple-400 uppercase">Fast-Track Career Growth</span>
+          <h3 class="text-lg font-bold text-white mt-1 mb-2">First Promotion in 3 Months</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Promoted within just 3 months of joining Spaulding Ridge due to exceptional impact in Talent Acquisition, clearing backlogged applications and accelerating hires.
+          </p>
+        </div>
+
+        <!-- Achievement 2: Spauldie Award -->
+        <div class="glass-card rounded-3xl p-6 border-purple-500/30 relative">
+          <div class="w-12 h-12 rounded-2xl bg-amber-900/60 border border-amber-400/50 flex items-center justify-center text-amber-300 text-xl mb-4">
+            <i class="fa-solid fa-trophy"></i>
+          </div>
+          <span class="text-xs font-mono text-amber-400 uppercase">Culture Award Winner</span>
+          <h3 class="text-lg font-bold text-white mt-1 mb-2">First Spauldie Award</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Honored with the prestigious Spauldie Award for "Culture Forward" at Spaulding Ridge, recognizing active leadership in DE&I, community outreach, and employee engagement.
+          </p>
+        </div>
+
+        <!-- Achievement 3: Onboarding Acceleration -->
+        <div class="glass-card rounded-3xl p-6 border-purple-500/30 relative">
+          <div class="w-12 h-12 rounded-2xl bg-purple-900/80 border border-purple-400/50 flex items-center justify-center text-purple-300 text-xl mb-4">
+            <i class="fa-solid fa-clock-rotate-left"></i>
+          </div>
+          <span class="text-xs font-mono text-purple-400 uppercase">Process Optimization</span>
+          <h3 class="text-lg font-bold text-white mt-1 mb-2">30% Turnaround Cut</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Streamlined regional onboarding processes across India, Philippines, and Singapore through automation and standardized checklists for 80+ annual hires.
+          </p>
+        </div>
+
+        <!-- Achievement 4: TA Backlog -->
+        <div class="glass-card rounded-3xl p-6 border-purple-500/30 relative">
+          <div class="w-12 h-12 rounded-2xl bg-indigo-900/80 border border-indigo-400/50 flex items-center justify-center text-indigo-300 text-xl mb-4">
+            <i class="fa-solid fa-user-check"></i>
+          </div>
+          <span class="text-xs font-mono text-indigo-400 uppercase">Recruitment Sprint</span>
+          <h3 class="text-lg font-bold text-white mt-1 mb-2">200+ Apps Cleared</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Cleared a critical bottleneck of 200+ backlogged technology role applications within 4 months, driving candidate pipeline velocity.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EXPERIENCE TIMELINE SECTION -->
+  <section id="experience" class="py-16 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="mb-12 text-center lg:text-left">
+        <span class="text-purple-400 font-mono text-xs uppercase tracking-widest">// Career Journey</span>
+        <h2 class="text-3xl font-bold text-white mt-2">Professional Experience</h2>
+      </div>
+
+      <div class="space-y-8 relative before:absolute before:inset-0 before:left-4 md:before:left-1/2 before:-ml-px before:w-0.5 before:bg-gradient-to-b before:from-purple-500 before:via-purple-900 before:to-transparent">
+        
+        <!-- Role 1: Spaulding Ridge -->
+        <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+          
+          <!-- Timeline Node Icon -->
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-purple-600 border-4 border-brand-black text-white text-xs font-bold shadow-lg shadow-purple-900/50 shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+            <i class="fa-solid fa-briefcase"></i>
+          </div>
+
+          <!-- Content Card -->
+          <div class="w-[calc(100%-3rem)] md:w-[calc(50%-2.5rem)] glass-card p-6 sm:p-8 rounded-3xl border-purple-500/30">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+              <span class="text-xs font-mono text-purple-300 bg-purple-900/50 px-3 py-1 rounded-full border border-purple-500/30">Nov 2021 – Present</span>
+              <span class="text-xs text-slate-400 font-mono"><i class="fa-solid fa-location-dot mr-1"></i>Pune, India</span>
+            </div>
+
+            <h3 class="text-xl font-bold text-white">Senior Associate – People & HR Operations</h3>
+            <h4 class="text-sm font-semibold text-purple-400 mb-4">Spaulding Ridge</h4>
+
+            <ul class="space-y-2.5 text-xs sm:text-sm text-slate-300 leading-relaxed">
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-angle-right text-purple-400 mt-1"></i>
+                <span><strong>Employee Lifecycle Leadership:</strong> Own full lifecycle administration for 80+ annual APAC hires (India, Philippines, Singapore) covering onboarding, probation tracking, promotions, and offboarding.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-angle-right text-purple-400 mt-1"></i>
+                <span><strong>Process Automation:</strong> Reduced onboarding turnaround time by 30% through workflow redesign, regional checklists, and automated notifications.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-angle-right text-purple-400 mt-1"></i>
+                <span><strong>HRIS Administration:</strong> Maintain employee records in ADP Workforce Now, setup leave management modules, and manage ticket queues in Salesforce and FinancialForce.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-angle-right text-purple-400 mt-1"></i>
+                <span><strong>Global & NA/EMEA Operations:</strong> Coordinate performance evaluation cycles in Lattice, manage leave audits, and support executive stakeholders across NA and EMEA.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-angle-right text-purple-400 mt-1"></i>
+                <span><strong>AI Analytics & Reporting:</strong> Build workforce analytics dashboards using M365 Copilot and RAG-based tools for attrition, headcount, and performance reporting.</span>
+              </li>
+            </ul>
+
+            <!-- Tech Badges for Role -->
+            <div class="mt-6 pt-4 border-t border-purple-900/40 flex flex-wrap gap-2">
+              <span class="px-2.5 py-1 rounded-lg text-[10px] font-mono bg-purple-900/30 text-purple-300 border border-purple-500/20">ADP Workforce Now</span>
+              <span class="px-2.5 py-1 rounded-lg text-[10px] font-mono bg-purple-900/30 text-purple-300 border border-purple-500/20">Salesforce HRIS</span>
+              <span class="px-2.5 py-1 rounded-lg text-[10px] font-mono bg-purple-900/30 text-purple-300 border border-purple-500/20">FinancialForce</span>
+              <span class="px-2.5 py-1 rounded-lg text-[10px] font-mono bg-purple-900/30 text-purple-300 border border-purple-500/20">Lattice</span>
+              <span class="px-2.5 py-1 rounded-lg text-[10px] font-mono bg-purple-900/30 text-purple-300 border border-purple-500/20">M365 Copilot</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Role 2: Samaksh Enterprises -->
+        <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+          
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-indigo-600 border-4 border-brand-black text-white text-xs font-bold shadow-lg shadow-indigo-900/50 shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+            <i class="fa-solid fa-user-gear"></i>
+          </div>
+
+          <div class="w-[calc(100%-3rem)] md:w-[calc(50%-2.5rem)] glass-card p-6 sm:p-8 rounded-3xl border-purple-500/30">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+              <span class="text-xs font-mono text-indigo-300 bg-indigo-900/50 px-3 py-1 rounded-full border border-indigo-500/30">Jul 2015 – Aug 2021</span>
+              <span class="text-xs text-slate-400 font-mono"><i class="fa-solid fa-location-dot mr-1"></i>Jaipur, India</span>
+            </div>
+
+            <h3 class="text-xl font-bold text-white">HR Manager</h3>
+            <h4 class="text-sm font-semibold text-indigo-400 mb-4">Samaksh Enterprises Pvt. Ltd.</h4>
+
+            <ul class="space-y-2.5 text-xs sm:text-sm text-slate-300 leading-relaxed">
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-angle-right text-indigo-400 mt-1"></i>
+                <span>Independently owned full employee lifecycle operations for 40+ full-time employees from recruitment to offboarding.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-angle-right text-indigo-400 mt-1"></i>
+                <span>Managed structured internship programs for 20+ annual interns and coordinated logistics for 100+ event interns across India.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-angle-right text-indigo-400 mt-1"></i>
+                <span>Spearheaded an All India Employee Meet for 150+ staff, leading travel logistics, vendor management, and event execution.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-angle-right text-indigo-400 mt-1"></i>
+                <span>Designed DEI initiatives, wellness events, and active performance reviews, boosting participation by 25%.</span>
+              </li>
+            </ul>
+
+            <div class="mt-6 pt-4 border-t border-indigo-900/40 flex flex-wrap gap-2">
+              <span class="px-2.5 py-1 rounded-lg text-[10px] font-mono bg-indigo-900/30 text-indigo-300 border border-purple-500/20">Full Lifecycle HR</span>
+              <span class="px-2.5 py-1 rounded-lg text-[10px] font-mono bg-indigo-900/30 text-indigo-300 border border-purple-500/20">DEI Leadership</span>
+              <span class="px-2.5 py-1 rounded-lg text-[10px] font-mono bg-indigo-900/30 text-indigo-300 border border-purple-500/20">Vendor Logistics</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROJECTS & AI AGENT SECTION -->
+  <section id="projects" class="py-16 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="mb-10 text-center lg:text-left">
+        <span class="text-purple-400 font-mono text-xs uppercase tracking-widest">// Process Innovations & AI</span>
+        <h2 class="text-3xl font-bold text-white mt-2">Projects & AI Agents Showcase</h2>
+        <p class="text-slate-400 text-sm max-w-2xl mt-1">Demonstrating automation architecture, ticket workflows, live HR analytics, and M365 Copilot AI agents.</p>
+      </div>
+
+      <!-- Projects Tab Navigation -->
+      <div class="flex flex-wrap gap-2 mb-8 bg-brand-card p-2 rounded-2xl border border-purple-500/20 max-w-2xl">
+        <button onclick="switchProjTab('copilot')" id="tabBtnCopilot" class="nav-tab-btn active px-4 py-2.5 rounded-xl text-xs font-semibold flex items-center gap-2 transition-all">
+          <i class="fa-solid fa-robot"></i>
+          <span>Copilot Agent (Onboarding Buddy)</span>
+        </button>
+        <button onclick="switchProjTab('onboarding')" id="tabBtnOnboarding" class="nav-tab-btn px-4 py-2.5 rounded-xl text-xs font-semibold text-slate-300 hover:text-white flex items-center gap-2 transition-all">
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+          <span>Onboarding Automation</span>
+        </button>
+        <button onclick="switchProjTab('jira')" id="tabBtnJira" class="nav-tab-btn px-4 py-2.5 rounded-xl text-xs font-semibold text-slate-300 hover:text-white flex items-center gap-2 transition-all">
+          <i class="fa-solid fa-bolt"></i>
+          <span>Jira Ticket Automation</span>
+        </button>
+        <button onclick="switchProjTab('analytics')" id="tabBtnAnalytics" class="nav-tab-btn px-4 py-2.5 rounded-xl text-xs font-semibold text-slate-300 hover:text-white flex items-center gap-2 transition-all">
+          <i class="fa-solid fa-chart-pie"></i>
+          <span>HR Analytics Dashboard</span>
+        </button>
+      </div>
+
+      <!-- TAB 1: COPILOT AGENT SIMULATOR -->
+      <div id="projTabCopilot" class="space-y-6">
+        <div class="glass-card rounded-3xl p-6 sm:p-8 border-purple-500/30">
+          <div class="flex flex-col lg:flex-row gap-8 items-start justify-between mb-6">
+            <div>
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-900/50 border border-purple-500/30 text-purple-300 text-xs font-mono mb-2">
+                <i class="fa-solid fa-microchip"></i>
+                <span>M365 Copilot Agent Implementation</span>
+              </div>
+              <h3 class="text-2xl font-bold text-white">AI Onboarding Buddy Agent</h3>
+              <p class="text-xs text-slate-300 mt-1 max-w-2xl">
+                Created an enterprise AI assistant agent using M365 Copilot and RAG architecture to dynamically answer new hire queries on Benefits, Leave Policies, Time Cards, Realization Bonuses, and Performance Cycles.
+              </p>
+            </div>
+
+            <div class="flex items-center gap-2">
+              <span class="px-3 py-1 rounded-xl text-xs font-mono bg-emerald-900/40 text-emerald-300 border border-emerald-500/30 flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                <span>Agent Status: Online</span>
+              </span>
+            </div>
+          </div>
+
+          <!-- Interactive Copilot Simulator Box -->
+          <div class="bg-brand-black/90 rounded-2xl border border-purple-500/30 p-4 sm:p-6 space-y-4">
+            
+            <div class="flex items-center justify-between pb-3 border-b border-purple-900/40">
+              <div class="flex items-center gap-2 text-xs text-purple-300 font-mono">
+                <i class="fa-solid fa-robot text-purple-400"></i>
+                <span>Copilot Agent Simulator — Ask New Hire Queries</span>
+              </div>
+              <span class="text-[10px] text-slate-500 font-mono">Select a prompt below to test response:</span>
+            </div>
+
+            <!-- Quick Prompt Buttons -->
+            <div class="flex flex-wrap gap-2">
+              <button onclick="askCopilot('benefits')" class="px-3 py-1.5 rounded-lg bg-purple-900/30 hover:bg-purple-800/50 border border-purple-500/30 text-xs text-purple-200 transition-all text-left">
+                💡 "What are my medical benefits and enrollment deadlines?"
+              </button>
+              <button onclick="askCopilot('leave')" class="px-3 py-1.5 rounded-lg bg-purple-900/30 hover:bg-purple-800/50 border border-purple-500/30 text-xs text-purple-200 transition-all text-left">
+                🌴 "How does the annual leave policy work?"
+              </button>
+              <button onclick="askCopilot('timecards')" class="px-3 py-1.5 rounded-lg bg-purple-900/30 hover:bg-purple-800/50 border border-purple-500/30 text-xs text-purple-200 transition-all text-left">
+                ⏱️ "When are weekly time cards submitted?"
+              </button>
+              <button onclick="askCopilot('bonus')" class="px-3 py-1.5 rounded-lg bg-purple-900/30 hover:bg-purple-800/50 border border-purple-500/30 text-xs text-purple-200 transition-all text-left">
+                💰 "How is the realization bonus calculated?"
+              </button>
+              <button onclick="askCopilot('performance')" class="px-3 py-1.5 rounded-lg bg-purple-900/30 hover:bg-purple-800/50 border border-purple-500/30 text-xs text-purple-200 transition-all text-left">
+                🎯 "What is the timeline for the performance review cycle?"
+              </button>
+            </div>
+
+            <!-- Chat Display Window -->
+            <div id="copilotChatWindow" class="min-h-[160px] max-h-[220px] overflow-y-auto p-4 rounded-xl bg-brand-card/80 border border-purple-900/40 text-xs space-y-3 font-sans">
+              <div class="flex items-start gap-2.5">
+                <div class="w-6 h-6 rounded-lg bg-purple-600 flex items-center justify-center text-white text-[10px] shrink-0 mt-0.5">
+                  <i class="fa-solid fa-robot"></i>
+                </div>
+                <div class="p-3 rounded-2xl bg-purple-950/60 border border-purple-500/20 text-slate-200 max-w-xl">
+                  Hello! I am your <strong>AI Onboarding Buddy</strong>. Select any topic above to see how I assist new hires with real-time HR knowledge retrieval.
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 2: ONBOARDING AUTOMATION -->
+      <div id="projTabOnboarding" class="hidden space-y-6">
+        <div class="glass-card rounded-3xl p-6 sm:p-8 border-purple-500/30">
+          <span class="text-xs font-mono text-purple-400 uppercase">// Workflow Architecture</span>
+          <h3 class="text-2xl font-bold text-white mt-1 mb-4">Automating Employee Onboarding with MS Power Automate</h3>
+          
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <div class="space-y-3 text-xs sm:text-sm text-slate-300">
+              <p><strong>Business Problem:</strong> Manual welcome email dispatches and joining document collections took 30+ minutes per hire, creating Day 1 delays for 80+ annual hires.</p>
+              <p><strong>Solution:</strong> Built a scheduled Power Automate cloud flow linked to ADP Workforce Now and Microsoft Forms with trigger condition rules.</p>
+              <p><strong>Business Impact:</strong> Reduced onboarding turnaround time by 30%, ensured 100% on-time Day 1 welcome kit delivery, and eliminated manual data errors.</p>
+              
+              <div class="pt-2 flex flex-wrap gap-2">
+                <span class="px-2.5 py-1 rounded-md text-[10px] font-mono bg-purple-900/50 text-purple-300">MS Power Automate</span>
+                <span class="px-2.5 py-1 rounded-md text-[10px] font-mono bg-purple-900/50 text-purple-300">ADP Workforce Now</span>
+                <span class="px-2.5 py-1 rounded-md text-[10px] font-mono bg-purple-900/50 text-purple-300">Microsoft Forms</span>
+              </div>
+            </div>
+
+            <!-- Workflow Diagram Canvas -->
+            <div class="p-4 rounded-2xl bg-brand-black/90 border border-purple-500/30 text-center">
+              <div class="text-xs font-mono text-purple-400 mb-3"><i class="fa-solid fa-diagram-project mr-1"></i>Onboarding Workflow Diagram</div>
+              <div class="grid grid-cols-3 gap-2 text-[10px] font-mono">
+                <div class="p-2.5 rounded-xl bg-purple-950 border border-purple-500/40 text-purple-200">
+                  <i class="fa-solid fa-user-plus text-sm mb-1 block text-purple-400"></i>
+                  New Hire Trigger
+                </div>
+                <div class="p-2.5 rounded-xl bg-purple-950 border border-purple-500/40 text-purple-200">
+                  <i class="fa-solid fa-gears text-sm mb-1 block text-purple-400"></i>
+                  ADP & Form Validation
+                </div>
+                <div class="p-2.5 rounded-xl bg-purple-950 border border-purple-500/40 text-purple-200">
+                  <i class="fa-solid fa-paper-plane text-sm mb-1 block text-purple-400"></i>
+                  Welcome Pack Sent
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 3: JIRA TICKET AUTOMATION -->
+      <div id="projTabJira" class="hidden space-y-6">
+        <div class="glass-card rounded-3xl p-6 sm:p-8 border-purple-500/30">
+          <span class="text-xs font-mono text-indigo-400 uppercase">// Ticketing Automation</span>
+          <h3 class="text-2xl font-bold text-white mt-1 mb-4">Zapier & Power Automate Workflow for Jira HR Tickets</h3>
+          
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <div class="space-y-3 text-xs sm:text-sm text-slate-300">
+              <p><strong>Business Problem:</strong> HR inquiries submitted across email and chat were untracked, causing delayed responses for employee lifecycle transitions.</p>
+              <p><strong>Solution:</strong> Configured automatic Jira issue generation triggered via Zapier and Salesforce/FinancialForce ticketing forms.</p>
+              <p><strong>Benefits:</strong> Guaranteed inquiry routing, SLA tracking, and complete record-keeping across regional APAC/NA support queues.</p>
+
+              <div class="pt-2 flex flex-wrap gap-2">
+                <span class="px-2.5 py-1 rounded-md text-[10px] font-mono bg-indigo-900/50 text-indigo-300">Jira HR Service Desk</span>
+                <span class="px-2.5 py-1 rounded-md text-[10px] font-mono bg-indigo-900/50 text-indigo-300">Zapier Automation</span>
+                <span class="px-2.5 py-1 rounded-md text-[10px] font-mono bg-indigo-900/50 text-indigo-300">Salesforce Ticketing</span>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-brand-black/90 border border-indigo-500/30 text-center">
+              <div class="text-xs font-mono text-indigo-400 mb-3"><i class="fa-solid fa-ticket mr-1"></i>Ticket Lifecycle Flow</div>
+              <div class="space-y-2 text-[10px] font-mono">
+                <div class="p-2 rounded-xl bg-indigo-950/80 border border-indigo-500/30 text-indigo-200 flex items-center justify-between">
+                  <span>Employee Request Submitted</span>
+                  <i class="fa-solid fa-arrow-right text-indigo-400"></i>
+                </div>
+                <div class="p-2 rounded-xl bg-indigo-950/80 border border-indigo-500/30 text-indigo-200 flex items-center justify-between">
+                  <span>Auto-Generated Jira Ticket</span>
+                  <i class="fa-solid fa-arrow-right text-indigo-400"></i>
+                </div>
+                <div class="p-2 rounded-xl bg-indigo-950/80 border border-indigo-500/30 text-indigo-200 flex items-center justify-between">
+                  <span>SLA Category Routing & Closure</span>
+                  <i class="fa-solid fa-check text-emerald-400"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 4: HR ANALYTICS DASHBOARD -->
+      <div id="projTabAnalytics" class="hidden space-y-6">
+        <div class="glass-card rounded-3xl p-6 sm:p-8 border-purple-500/30">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+            <div>
+              <span class="text-xs font-mono text-purple-400 uppercase">// Live Data Visualization</span>
+              <h3 class="text-2xl font-bold text-white">HR Operations Analytics Dashboard</h3>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="px-3 py-1 rounded-xl text-xs font-mono bg-purple-900/50 text-purple-300 border border-purple-500/30">
+                Interactive Chart.js Engine
+              </span>
+            </div>
+          </div>
+
+          <!-- Live Metrics Grid -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6">
+            <div class="p-4 rounded-2xl bg-brand-black/80 border border-purple-500/20 text-center">
+              <span class="text-[10px] font-mono text-slate-400 uppercase">Total Headcount</span>
+              <div class="text-2xl font-bold text-white mt-1">327</div>
+              <span class="text-[10px] text-emerald-400 font-mono">+12% YoY Growth</span>
+            </div>
+            <div class="p-4 rounded-2xl bg-brand-black/80 border border-purple-500/20 text-center">
+              <span class="text-[10px] font-mono text-slate-400 uppercase">Annual Attrition</span>
+              <div class="text-2xl font-bold text-purple-300 mt-1">3.2%</div>
+              <span class="text-[10px] text-purple-400 font-mono">Industry Leading</span>
+            </div>
+            <div class="p-4 rounded-2xl bg-brand-black/80 border border-purple-500/20 text-center">
+              <span class="text-[10px] font-mono text-slate-400 uppercase">Gender Parity</span>
+              <div class="text-2xl font-bold text-indigo-300 mt-1">48 : 52</div>
+              <span class="text-[10px] text-indigo-400 font-mono">Balanced Workforce</span>
+            </div>
+            <div class="p-4 rounded-2xl bg-brand-black/80 border border-purple-500/20 text-center">
+              <span class="text-[10px] font-mono text-slate-400 uppercase">Onboarding Speed</span>
+              <div class="text-2xl font-bold text-emerald-400 mt-1">30% Faster</div>
+              <span class="text-[10px] text-emerald-400 font-mono">Automated Standard</span>
+            </div>
+          </div>
+
+          <!-- Charts Grid -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <div class="p-4 rounded-2xl bg-brand-black/80 border border-purple-500/20">
+              <h4 class="text-xs font-mono text-purple-300 mb-3"><i class="fa-solid fa-chart-line mr-1"></i>Monthly Hiring & Onboarding Trend</h4>
+              <div class="h-48 relative">
+                <canvas id="hiringTrendChart"></canvas>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-brand-black/80 border border-purple-500/20">
+              <h4 class="text-xs font-mono text-purple-300 mb-3"><i class="fa-solid fa-chart-pie mr-1"></i>Departmental Headcount Split</h4>
+              <div class="h-48 relative flex justify-center">
+                <canvas id="deptSplitChart"></canvas>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SKILLS & HRIS STACK SECTION -->
+  <section id="skills" class="py-16 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="mb-10 text-center lg:text-left">
+        <span class="text-purple-400 font-mono text-xs uppercase tracking-widest">// Technical Competencies</span>
+        <h2 class="text-3xl font-bold text-white mt-2">Core Skills & HRIS Systems Stack</h2>
+        <p class="text-slate-400 text-sm max-w-2xl mt-1">Enterprise HR applications, lifecycle administration, and automation tools.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Category 1: Employee Lifecycle -->
+        <div class="glass-card rounded-3xl p-6 sm:p-8 border-purple-500/30">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-10 h-10 rounded-2xl bg-purple-900/60 border border-purple-400/40 flex items-center justify-center text-purple-300">
+              <i class="fa-solid fa-users-gear text-lg"></i>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-white">Employee Lifecycle & Operations</h3>
+              <p class="text-xs text-purple-300 font-mono">End-to-End Governance</p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-3">
+            <div class="p-3 rounded-xl bg-brand-black/60 border border-purple-500/20 flex items-center gap-2">
+              <i class="fa-solid fa-check text-purple-400 text-xs"></i>
+              <span class="text-xs text-slate-200">Onboarding & Pre-boarding</span>
+            </div>
+            <div class="p-3 rounded-xl bg-brand-black/60 border border-purple-500/20 flex items-center gap-2">
+              <i class="fa-solid fa-check text-purple-400 text-xs"></i>
+              <span class="text-xs text-slate-200">Offboarding & Exits</span>
+            </div>
+            <div class="p-3 rounded-xl bg-brand-black/60 border border-purple-500/20 flex items-center gap-2">
+              <i class="fa-solid fa-check text-purple-400 text-xs"></i>
+              <span class="text-xs text-slate-200">Employee Engagement</span>
+            </div>
+            <div class="p-3 rounded-xl bg-brand-black/60 border border-purple-500/20 flex items-center gap-2">
+              <i class="fa-solid fa-check text-purple-400 text-xs"></i>
+              <span class="text-xs text-slate-200">Performance Management</span>
+            </div>
+            <div class="p-3 rounded-xl bg-brand-black/60 border border-purple-500/20 flex items-center gap-2">
+              <i class="fa-solid fa-check text-purple-400 text-xs"></i>
+              <span class="text-xs text-slate-200">Employee Relations</span>
+            </div>
+            <div class="p-3 rounded-xl bg-brand-black/60 border border-purple-500/20 flex items-center gap-2">
+              <i class="fa-solid fa-check text-purple-400 text-xs"></i>
+              <span class="text-xs text-slate-200">Day-to-Day Query Handling</span>
+            </div>
+            <div class="p-3 rounded-xl bg-brand-black/60 border border-purple-500/20 flex items-center gap-2">
+              <i class="fa-solid fa-check text-purple-400 text-xs"></i>
+              <span class="text-xs text-slate-200">Probation Tracking</span>
+            </div>
+            <div class="p-3 rounded-xl bg-brand-black/60 border border-purple-500/20 flex items-center gap-2">
+              <i class="fa-solid fa-check text-purple-400 text-xs"></i>
+              <span class="text-xs text-slate-200">Promotions & Movements</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 2: HRIS & Enterprise Systems -->
+        <div class="glass-card rounded-3xl p-6 sm:p-8 border-purple-500/30">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-10 h-10 rounded-2xl bg-indigo-900/60 border border-indigo-400/40 flex items-center justify-center text-indigo-300">
+              <i class="fa-solid fa-laptop-code text-lg"></i>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-white">HRIS Systems & Tools</h3>
+              <p class="text-xs text-indigo-300 font-mono">Enterprise Software Stack</p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-3">
+            <div class="p-3 rounded-xl bg-brand-black/60 border border-indigo-500/20 flex items-center gap-2">
+              <i class="fa-solid fa-database text-indigo-400 text-xs"></i>
+              <span class="text-xs text-slate-200">ADP Workforce Now</span>
+            </div>
+            <div class="p-3 rounded-xl bg-brand-black/60 border border-indigo-500/20 flex items-center gap-2">
+              <i class="fa-solid fa-cloud text-indigo-400 text-xs"></i>
+              <span class="text-xs text-slate-200">Salesforce HRIS</span>
+            </div>
+            <div class="p-3 rounded-xl bg-brand-black/60 border border-indigo-500/20 flex items-center gap-2">
+              <i class="fa-solid fa-chart-line text-indigo-400 text-xs"></i>
+              <span class="text-xs text-slate-200">FinancialForce</span>
+            </div>
+            <div class="p-3 rounded-xl bg-brand-black/60 border border-indigo-500/20 flex items-center gap-2">
+              <i class="fa-solid fa-filter text-indigo-400 text-xs"></i>
+              <span class="text-xs text-slate-200">Greenhouse ATS</span>
+            </div>
+            <div class="p-3 rounded-xl bg-brand-black/60 border border-indigo-500/20 flex items-center gap-2">
+              <i class="fa-solid fa-bullseye text-indigo-400 text-xs"></i>
+              <span class="text-xs text-slate-200">Lattice (Performance)</span>
+            </div>
+            <div class="p-3 rounded-xl bg-brand-black/60 border border-indigo-500/20 flex items-center gap-2">
+              <i class="fa-solid fa-coins text-indigo-400 text-xs"></i>
+              <span class="text-xs text-slate-200">Pequity (Compensation)</span>
+            </div>
+            <div class="p-3 rounded-xl bg-brand-black/60 border border-indigo-500/20 flex items-center gap-2">
+              <i class="fa-solid fa-table text-indigo-400 text-xs"></i>
+              <span class="text-xs text-slate-200">Smartsheet</span>
+            </div>
+            <div class="p-3 rounded-xl bg-brand-black/60 border border-indigo-500/20 flex items-center gap-2">
+              <i class="fa-solid fa-signature text-indigo-400 text-xs"></i>
+              <span class="text-xs text-slate-200">DocuSign</span>
+            </div>
+            <div class="p-3 rounded-xl bg-brand-black/60 border border-indigo-500/20 flex items-center gap-2">
+              <i class="fa-solid fa-ticket text-indigo-400 text-xs"></i>
+              <span class="text-xs text-slate-200">Jira Service Desk</span>
+            </div>
+            <div class="p-3 rounded-xl bg-brand-black/60 border border-indigo-500/20 flex items-center gap-2">
+              <i class="fa-solid fa-folder-tree text-indigo-400 text-xs"></i>
+              <span class="text-xs text-slate-200">SharePoint / M365</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- DEI & COMMUNITY OUTREACH SECTION -->
+  <section id="dei" class="py-16 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="mb-10 text-center lg:text-left">
+        <span class="text-purple-400 font-mono text-xs uppercase tracking-widest">// Culture & Impact</span>
+        <h2 class="text-3xl font-bold text-white mt-2">Championing DE&I & Social Impact</h2>
+        <p class="text-slate-400 text-sm max-w-2xl mt-1">PROUD Committee leadership, community outreach, and sustainability initiatives.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Card 1: PROUD Committee (Pride Parade Photo) -->
+        <div class="glass-card rounded-3xl p-6 border-purple-500/30 flex flex-col justify-between group relative">
+          <div>
+            <!-- Image Thumbnail Frame -->
+            <div class="relative w-full h-48 rounded-2xl overflow-hidden mb-4 bg-brand-black/80 border border-purple-500/30">
+              <img 
+                src="1706536002722.jpg" 
+                alt="Jaipur Pride Parade Event" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              >
+            </div>
+
+            <div class="flex items-center gap-2 mb-2">
+              <div class="w-7 h-7 rounded-lg bg-pink-900/60 border border-pink-400/50 flex items-center justify-center text-pink-300 text-xs">
+                <i class="fa-solid fa-rainbow"></i>
+              </div>
+              <span class="text-xs font-mono text-pink-400 uppercase">PROUD Committee Lead</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mt-1 mb-3">Pride Parade Hosted in Jaipur</h3>
+            <p class="text-xs text-slate-300 leading-relaxed mb-4">
+              Spearheaded and hosted the landmark Jaipur Pride Parade event under the PROUD Committee, promoting inclusive workplace culture and LGBTQIA+ allyship across regional offices.
+            </p>
+          </div>
+
+          <div class="pt-3 border-t border-purple-900/40 text-[11px] font-mono text-pink-300 flex justify-between items-center">
+            <span>#Inclusion #PROUD #DEI</span>
+            <span class="text-purple-300 flex items-center gap-1 text-[10px]">
+              <i class="fa-solid fa-image text-purple-400"></i>
+              <span>Event Photo</span>
+            </span>
+          </div>
+        </div>
+
+        <!-- Card 2: Community Outreach (Animal Welfare Photo) -->
+        <div class="glass-card rounded-3xl p-6 border-purple-500/30 flex flex-col justify-between group relative">
+          <div>
+            <!-- Image Thumbnail Frame -->
+            <div class="relative w-full h-48 rounded-2xl overflow-hidden mb-4 bg-brand-black/80 border border-purple-500/30">
+              <img 
+                src="1698932972701.jpg" 
+                alt="Animal Welfare & Charitable Drives" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              >
+            </div>
+
+            <div class="flex items-center gap-2 mb-2">
+              <div class="w-7 h-7 rounded-lg bg-amber-900/60 border border-amber-400/50 flex items-center justify-center text-amber-300 text-xs">
+                <i class="fa-solid fa-hand-holding-heart"></i>
+              </div>
+              <span class="text-xs font-mono text-amber-400 uppercase">Community Outreach</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mt-1 mb-3">Animal Welfare & Charitable Drives</h3>
+            <p class="text-xs text-slate-300 leading-relaxed mb-4">
+              Organized regional animal welfare initiatives, local donation drives, and charitable partnerships, fostering corporate social responsibility and active employee volunteering.
+            </p>
+          </div>
+
+          <div class="pt-3 border-t border-purple-900/40 text-[11px] font-mono text-amber-300 flex justify-between items-center">
+            <span>#SocialImpact #CSR #AnimalWelfare</span>
+            <span class="text-amber-300 flex items-center gap-1 text-[10px]">
+              <i class="fa-solid fa-image text-amber-400"></i>
+              <span>Event Photo</span>
+            </span>
+          </div>
+        </div>
+
+        <!-- Card 3: Green Initiatives (Trekking Photo) -->
+        <div class="glass-card rounded-3xl p-6 border-purple-500/30 flex flex-col justify-between group relative">
+          <div>
+            <!-- Image Thumbnail Frame -->
+            <div class="relative w-full h-48 rounded-2xl overflow-hidden mb-4 bg-brand-black/80 border border-purple-500/30">
+              <img 
+                src="1690519382813.jpg" 
+                alt="Green Initiatives & Trekking Event" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              >
+            </div>
+
+            <div class="flex items-center gap-2 mb-2">
+              <div class="w-7 h-7 rounded-lg bg-emerald-900/60 border border-emerald-400/50 flex items-center justify-center text-emerald-300 text-xs">
+                <i class="fa-solid fa-leaf"></i>
+              </div>
+              <span class="text-xs font-mono text-emerald-400 uppercase">Green Initiatives</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mt-1 mb-3">Paper Bag Making & Plantation Drives</h3>
+            <p class="text-xs text-slate-300 leading-relaxed mb-4">
+              Led eco-friendly sustainability drives including employee paper-bag crafting workshops, regional tree plantation events, and team wellness trekking expeditions.
+            </p>
+          </div>
+
+          <div class="pt-3 border-t border-purple-900/40 text-[11px] font-mono text-emerald-300 flex justify-between items-center">
+            <span>#Sustainability #GreenHR #Wellness</span>
+            <span class="text-emerald-300 flex items-center gap-1 text-[10px]">
+              <i class="fa-solid fa-image text-emerald-400"></i>
+              <span>Event Photo</span>
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS SECTION -->
+  <section id="certifications" class="py-16 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="mb-10 flex flex-col md:flex-row md:items-end justify-between gap-6">
+        <div>
+          <span class="text-purple-400 font-mono text-xs uppercase tracking-widest">// Credentials & Accreditations</span>
+          <h2 class="text-3xl font-bold text-white mt-2">Professional Certifications Gallery</h2>
+          <p class="text-slate-400 text-sm max-w-2xl mt-1">10 Verified professional credentials spanning HRCI, Google AI, Workday, IBM, Tableau, and AIHR.</p>
+        </div>
+
+        <!-- Master View PDF Tab Button -->
+        <a href="Certificates.pdf" target="_blank" rel="noopener" class="px-6 py-3 rounded-2xl bg-purple-600 hover:bg-purple-500 text-white font-semibold text-xs uppercase tracking-wider shadow-lg shadow-purple-900/40 flex items-center gap-2 self-start md:self-auto transition-all hover:scale-105">
+          <i class="fa-solid fa-file-pdf text-base"></i>
+          <span>View Full Certificates PDF</span>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
+        
+        <!-- Cert 1 -->
+        <div class="glass-card rounded-2xl p-4 border-purple-500/30 flex items-center gap-3">
+          <div class="w-9 h-9 rounded-xl bg-purple-900/60 border border-purple-400/40 flex items-center justify-center text-purple-300 shrink-0 text-sm font-bold">01</div>
+          <div>
+            <h4 class="text-xs font-bold text-white">Google AI Professional</h4>
+            <p class="text-[10px] text-purple-300 font-mono">Google / Coursera</p>
+          </div>
+        </div>
+
+        <!-- Cert 2 -->
+        <div class="glass-card rounded-2xl p-4 border-purple-500/30 flex items-center gap-3">
+          <div class="w-9 h-9 rounded-xl bg-purple-900/60 border border-purple-400/40 flex items-center justify-center text-purple-300 shrink-0 text-sm font-bold">02</div>
+          <div>
+            <h4 class="text-xs font-bold text-white">Using AI in HR Practices</h4>
+            <p class="text-[10px] text-purple-300 font-mono">LinkedIn Learning</p>
+          </div>
+        </div>
+
+        <!-- Cert 3 -->
+        <div class="glass-card rounded-2xl p-4 border-purple-500/30 flex items-center gap-3">
+          <div class="w-9 h-9 rounded-xl bg-purple-900/60 border border-purple-400/40 flex items-center justify-center text-purple-300 shrink-0 text-sm font-bold">03</div>
+          <div>
+            <h4 class="text-xs font-bold text-white">HR as a Strategic Partner</h4>
+            <p class="text-[10px] text-purple-300 font-mono">LinkedIn Learning</p>
+          </div>
+        </div>
+
+        <!-- Cert 4 -->
+        <div class="glass-card rounded-2xl p-4 border-purple-500/30 flex items-center gap-3">
+          <div class="w-9 h-9 rounded-xl bg-purple-900/60 border border-purple-400/40 flex items-center justify-center text-purple-300 shrink-0 text-sm font-bold">04</div>
+          <div>
+            <h4 class="text-xs font-bold text-white">Workday Basics Series</h4>
+            <p class="text-[10px] text-purple-300 font-mono">Workday / Coursera</p>
+          </div>
+        </div>
+
+        <!-- Cert 5 -->
+        <div class="glass-card rounded-2xl p-4 border-purple-500/30 flex items-center gap-3">
+          <div class="w-9 h-9 rounded-xl bg-purple-900/60 border border-purple-400/40 flex items-center justify-center text-purple-300 shrink-0 text-sm font-bold">05</div>
+          <div>
+            <h4 class="text-xs font-bold text-white">Stakeholder Management</h4>
+            <p class="text-[10px] text-purple-300 font-mono">Starweaver / Coursera</p>
+          </div>
+        </div>
+
+        <!-- Cert 6 -->
+        <div class="glass-card rounded-2xl p-4 border-purple-500/30 flex items-center gap-3">
+          <div class="w-9 h-9 rounded-xl bg-purple-900/60 border border-purple-400/40 flex items-center justify-center text-purple-300 shrink-0 text-sm font-bold">06</div>
+          <div>
+            <h4 class="text-xs font-bold text-white">HRCI Associate Professional</h4>
+            <p class="text-[10px] text-purple-300 font-mono">HRCI / Coursera</p>
+          </div>
+        </div>
+
+        <!-- Cert 7 -->
+        <div class="glass-card rounded-2xl p-4 border-purple-500/30 flex items-center gap-3">
+          <div class="w-9 h-9 rounded-xl bg-purple-900/60 border border-purple-400/40 flex items-center justify-center text-purple-300 shrink-0 text-sm font-bold">07</div>
+          <div>
+            <h4 class="text-xs font-bold text-white">AI Fundamentals</h4>
+            <p class="text-[10px] text-purple-300 font-mono">Google / Coursera</p>
+          </div>
+        </div>
+
+        <!-- Cert 8 -->
+        <div class="glass-card rounded-2xl p-4 border-purple-500/30 flex items-center gap-3">
+          <div class="w-9 h-9 rounded-xl bg-purple-900/60 border border-purple-400/40 flex items-center justify-center text-purple-300 shrink-0 text-sm font-bold">08</div>
+          <div>
+            <h4 class="text-xs font-bold text-white">Introduction to Tableau</h4>
+            <p class="text-[10px] text-purple-300 font-mono">Tableau Salesforce</p>
+          </div>
+        </div>
+
+        <!-- Cert 9 -->
+        <div class="glass-card rounded-2xl p-4 border-purple-500/30 flex items-center gap-3">
+          <div class="w-9 h-9 rounded-xl bg-purple-900/60 border border-purple-400/40 flex items-center justify-center text-purple-300 shrink-0 text-sm font-bold">09</div>
+          <div>
+            <h4 class="text-xs font-bold text-white">Generative AI for HR</h4>
+            <p class="text-[10px] text-purple-300 font-mono">SkillUp / Coursera</p>
+          </div>
+        </div>
+
+        <!-- Cert 10 -->
+        <div class="glass-card rounded-2xl p-4 border-purple-500/30 flex items-center gap-3">
+          <div class="w-9 h-9 rounded-xl bg-purple-900/60 border border-purple-400/40 flex items-center justify-center text-purple-300 shrink-0 text-sm font-bold">10</div>
+          <div>
+            <h4 class="text-xs font-bold text-white">Certified Strategic Leader</h4>
+            <p class="text-[10px] text-purple-300 font-mono">IBM / Coursera</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT & FOOTER SECTION -->
+  <section id="contact" class="py-20 relative border-t border-purple-900/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-6 space-y-6">
+          <span class="text-purple-400 font-mono text-xs uppercase tracking-widest">// Let's Connect</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Ready to elevate your People Operations?</h2>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            I am currently exploring senior HR Operations and People Experience leadership roles. Whether you want to discuss APAC/global scaling, HRIS automation, or employee engagement, my inbox is always open.
+          </p>
+
+          <div class="space-y-4 pt-2">
+            <a href="mailto:shubhangivj19@gmail.com" class="flex items-center gap-4 p-4 rounded-2xl glass-card border-purple-500/20 hover:border-purple-400 transition-all group">
+              <div class="w-12 h-12 rounded-xl bg-purple-900/80 border border-purple-400/50 flex items-center justify-center text-purple-300 group-hover:scale-110 transition-transform">
+                <i class="fa-solid fa-envelope text-lg"></i>
+              </div>
+              <div>
+                <p class="text-xs text-slate-400 font-mono">Email Address</p>
+                <p class="text-sm font-bold text-white">shubhangivj19@gmail.com</p>
+              </div>
+            </a>
+
+            <a href="tel:+918209587502" class="flex items-center gap-4 p-4 rounded-2xl glass-card border-purple-500/20 hover:border-purple-400 transition-all group">
+              <div class="w-12 h-12 rounded-xl bg-purple-900/80 border border-purple-400/50 flex items-center justify-center text-purple-300 group-hover:scale-110 transition-transform">
+                <i class="fa-solid fa-phone text-lg"></i>
+              </div>
+              <div>
+                <p class="text-xs text-slate-400 font-mono">Phone / WhatsApp</p>
+                <p class="text-sm font-bold text-white">+91 82095 87502</p>
+              </div>
+            </a>
+
+            <div class="flex items-center gap-4 p-4 rounded-2xl glass-card border-purple-500/20">
+              <div class="w-12 h-12 rounded-xl bg-purple-900/80 border border-purple-400/50 flex items-center justify-center text-purple-300">
+                <i class="fa-solid fa-location-dot text-lg"></i>
+              </div>
+              <div>
+                <p class="text-xs text-slate-400 font-mono">Primary Location</p>
+                <p class="text-sm font-bold text-white">Pune, Maharashtra, India (Open to Remote / Global)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form Box -->
+        <div class="lg:col-span-6">
+          <div class="glass-card rounded-3xl p-8 border-purple-500/30 relative">
+            <h3 class="text-xl font-bold text-white mb-2">Send a Direct Message</h3>
+            <p class="text-xs text-slate-400 mb-6">Fill out the form below and I'll get back to you within 24 hours.</p>
+
+            <form id="contactForm" onsubmit="handleContactSubmit(event)" class="space-y-4">
+              <div>
+                <label class="block text-xs font-mono text-slate-300 mb-1">Your Name</label>
+                <input type="text" id="senderName" required placeholder="e.g. Sarah Jenkins" class="w-full px-4 py-3 rounded-xl bg-brand-black/80 border border-purple-500/30 text-white text-sm focus:outline-none focus:border-purple-400">
+              </div>
+
+              <div>
+                <label class="block text-xs font-mono text-slate-300 mb-1">Your Email</label>
+                <input type="email" id="senderEmail" required placeholder="s.jenkins@company.com" class="w-full px-4 py-3 rounded-xl bg-brand-black/80 border border-purple-500/30 text-white text-sm focus:outline-none focus:border-purple-400">
+              </div>
+
+              <div>
+                <label class="block text-xs font-mono text-slate-300 mb-1">Message</label>
+                <textarea id="senderMsg" rows="4" required placeholder="Hello Shubhangi, we would like to discuss an HR Operations leadership opportunity..." class="w-full px-4 py-3 rounded-xl bg-brand-black/80 border border-purple-500/30 text-white text-sm focus:outline-none focus:border-purple-400"></textarea>
+              </div>
+
+              <button type="submit" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-purple-700 to-indigo-600 hover:from-purple-600 hover:to-indigo-500 text-white font-semibold text-sm shadow-lg shadow-purple-900/50 transition-all flex items-center justify-center gap-2">
+                <i class="fa-solid fa-paper-plane"></i>
+                <span>Send Message</span>
+              </button>
+            </form>
+
+            <div id="formSuccessMsg" class="hidden mt-4 p-4 rounded-xl bg-emerald-950/80 border border-emerald-500/40 text-emerald-200 text-xs text-center font-mono">
+              <i class="fa-solid fa-circle-check mr-1.5 text-emerald-400"></i> Thank you! Your message has been sent successfully.
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="mt-20 pt-8 border-t border-purple-900/30 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400 font-mono">
+        <p>© 2026 Shubhangi Vijay. All rights reserved.</p>
+        <p>Designed for Senior HR Operations Leadership & Global People Impact.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- JAVASCRIPT SCRIPTS & CHART.JS INITIALIZATION -->
+  <script>
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileMenuBtn?.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Projects Tab Switching Function
+    function switchProjTab(tabKey) {
+      ['copilot', 'onboarding', 'jira', 'analytics'].forEach(key => {
+        const tabEl = document.getElementById('projTab' + key.charAt(0).toUpperCase() + key.slice(1));
+        const btnEl = document.getElementById('tabBtn' + key.charAt(0).toUpperCase() + key.slice(1));
+        if (tabEl) tabEl.classList.add('hidden');
+        if (btnEl) btnEl.classList.remove('active', 'bg-gradient-to-r', 'from-purple-700', 'to-indigo-600', 'text-white');
+      });
+
+      const activeTab = document.getElementById('projTab' + tabKey.charAt(0).toUpperCase() + tabKey.slice(1));
+      const activeBtn = document.getElementById('tabBtn' + tabKey.charAt(0).toUpperCase() + tabKey.slice(1));
+      if (activeTab) activeTab.classList.remove('hidden');
+      if (activeBtn) activeBtn.classList.add('active');
+    }
+
+    // Copilot AI Onboarding Buddy Simulator Logic
+    function askCopilot(topic) {
+      const chatWin = document.getElementById('copilotChatWindow');
+      if (!chatWin) return;
+
+      let userQuery = "";
+      let botResponse = "";
+
+      if (topic === 'benefits') {
+        userQuery = "What are my medical benefits and enrollment deadlines?";
+        botResponse = "As a new hire at Spaulding Ridge, you are eligible for comprehensive medical, dental, and vision insurance. Enrollment must be completed through ADP Workforce Now within <strong>30 days</strong> of your joining date. Coverage becomes effective on Day 1.";
+      } else if (topic === 'leave') {
+        userQuery = "How does the annual leave policy work?";
+        botResponse = "Full-time employees receive 24 days of annual paid leave (PTO) plus regional public holidays. Unused PTO carries over up to 5 days into Q1. Leave requests are submitted and approved directly through Workday / ADP.";
+      } else if (topic === 'timecards') {
+        userQuery = "When are weekly time cards submitted?";
+        botResponse = "Weekly time cards and billable hours must be submitted in FinancialForce/Salesforce by <strong>Friday 5:00 PM</strong> of each work week to ensure timely payroll and utilization tracking.";
+      } else if (topic === 'bonus') {
+        userQuery = "How is the realization bonus calculated?";
+        botResponse = "Realization bonuses are tied to quarterly utilization targets (>80% billable hours), project delivery quality scorecards in Lattice, and adherence to timesheet submission deadlines.";
+      } else if (topic === 'performance') {
+        userQuery = "What is the timeline for the performance review cycle?";
+        botResponse = "Our performance management cycle runs bi-annually (Mid-year in July and Year-end in December). Self-evaluations and peer feedback are coordinated via <strong>Lattice</strong>.";
+      }
+
+      // Append User Message
+      const userDiv = document.createElement('div');
+      userDiv.className = 'flex items-start gap-2.5 justify-end';
+      userDiv.innerHTML = `
+        <div class="p-3 rounded-2xl bg-purple-900/60 border border-purple-500/40 text-slate-100 max-w-xl">
+          ${userQuery}
+        </div>
+        <div class="w-6 h-6 rounded-lg bg-indigo-600 flex items-center justify-center text-white text-[10px] shrink-0 mt-0.5">
+          <i class="fa-solid fa-user"></i>
+        </div>
+      `;
+      chatWin.appendChild(userDiv);
+
+      // Simulate Typing & Append Bot Response
+      setTimeout(() => {
+        const botDiv = document.createElement('div');
+        botDiv.className = 'flex items-start gap-2.5';
+        botDiv.innerHTML = `
+          <div class="w-6 h-6 rounded-lg bg-purple-600 flex items-center justify-center text-white text-[10px] shrink-0 mt-0.5">
+            <i class="fa-solid fa-robot"></i>
+          </div>
+          <div class="p-3 rounded-2xl bg-purple-950/60 border border-purple-500/20 text-slate-200 max-w-xl">
+            ${botResponse}
+          </div>
+        `;
+        chatWin.appendChild(botDiv);
+        chatWin.scrollTop = chatWin.scrollHeight;
+      }, 500);
+
+      chatWin.scrollTop = chatWin.scrollHeight;
+    }
+
+    // Initialize Chart.js Analytics Dashboards
+    window.addEventListener('DOMContentLoaded', () => {
+      // Hiring Trend Chart
+      const hiringCtx = document.getElementById('hiringTrendChart')?.getContext('2d');
+      if (hiringCtx) {
+        new Chart(hiringCtx, {
+          type: 'line',
+          data: {
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+            datasets: [{
+              label: 'APAC Hires & Onboardings',
+              data: [6, 8, 7, 9, 11, 8, 10, 12, 9, 8, 7, 10],
+              borderColor: '#a855f7',
+              backgroundColor: 'rgba(168, 85, 247, 0.1)',
+              borderWidth: 3,
+              fill: true,
+              tension: 0.4
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: { legend: { display: false } },
+            scales: {
+              x: { grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { color: '#9ca3af', font: { size: 10 } } },
+              y: { grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { color: '#9ca3af', font: { size: 10 } } }
+            }
+          }
+        });
+      }
+
+      // Department Split Doughnut Chart
+      const deptCtx = document.getElementById('deptSplitChart')?.getContext('2d');
+      if (deptCtx) {
+        new Chart(deptCtx, {
+          type: 'doughnut',
+          data: {
+            labels: ['Tech Delivery', 'HR & Operations', 'Finance & Advisory', 'Executive Leadership'],
+            datasets: [{
+              data: [62, 18, 12, 8],
+              backgroundColor: ['#a855f7', '#3b82f6', '#10b981', '#f59e0b'],
+              borderWidth: 0
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: {
+                position: 'bottom',
+                labels: { color: '#cbd5e1', font: { size: 10 } }
+              }
+            }
+          }
+        });
+      }
+    });
+
+    // Contact Form Handler
+    function handleContactSubmit(e) {
+      e.preventDefault();
+      const successBox = document.getElementById('formSuccessMsg');
+      if (successBox) {
+        successBox.classList.remove('hidden');
+        document.getElementById('contactForm')?.reset();
+        setTimeout(() => {
+          successBox.classList.add('hidden');
+        }, 5000);
+      }
+    }
+  </script>
+
+</body>
+</html>
