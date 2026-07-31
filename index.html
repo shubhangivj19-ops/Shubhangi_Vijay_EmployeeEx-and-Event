@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shubhangi Vijay | Employee Experience Specialist Portfolio</title>
+    <title>Shubhangi Vijay | Employee Experience Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Canvas Confetti Library for Pop-up Animation -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <style>
         :root {
-            --gradient: linear-gradient(135deg, #FF6B6B 0%, #FFD93D 25%, #6BCB77 50%, #4D96FF 75%, #9966FF 100%);
-            --bg-color: #ffffff;
-            --card-bg: #f8fafc;
-            --text-main: #0f172a;
-            --text-muted: #64748b;
-            --accent-blue: #2563eb;
-            --accent-green: #16a34a;
-            --accent-yellow: #ca8a04;
-            --accent-pink: #dc2626;
-            --border-color: #e2e8f0;
+            --bg-color: #f3f0fa; /* Light Lavender Background */
+            --card-bg: #ffffff;
+            --text-main: #0c1b33;  /* Navy Blue Font */
+            --text-muted: #334e68;
+            --accent-blue: #1d3557;
+            --accent-green: #2b9348;
+            --border-color: #d8cfea;
         }
+
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
         body { background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; }
 
@@ -25,7 +25,7 @@
         nav {
             position: fixed;
             top: 0; left: 0; width: 100%;
-            background: rgba(255, 255, 255, 0.9);
+            background: rgba(243, 240, 250, 0.92);
             backdrop-filter: blur(10px);
             display: flex;
             justify-content: space-between;
@@ -34,41 +34,40 @@
             z-index: 1000;
             border-bottom: 1px solid var(--border-color);
         }
-        .nav-logo { font-weight: 800; font-size: 1.2rem; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .nav-logo { font-weight: 800; font-size: 1.2rem; color: var(--accent-blue); letter-spacing: 0.5px; }
         .nav-links { display: flex; list-style: none; gap: 20px; }
         .nav-links a { color: var(--text-muted); text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: color 0.3s; }
         .nav-links a:hover { color: var(--accent-blue); }
 
-        /* Hero Section with White Background & Party Abstract Effect */
+        /* Hero Section with Light Lavender BG & Party Splash Abstract */
         header {
-            padding: 150px 20px 80px;
+            padding: 160px 20px 90px;
             text-align: center;
             position: relative;
             overflow: hidden;
-            background: #ffffff;
+            background: var(--bg-color);
         }
-        /* Party abstract festive background shapes */
+        /* Party splash abstract shapes background */
         header::before {
             content: '';
             position: absolute;
             top: 0; left: 0; width: 100%; height: 100%;
             background-image: 
-                radial-gradient(circle 80px at 10% 20%, rgba(255, 107, 107, 0.12) 0%, transparent 100%),
-                radial-gradient(circle 100px at 90% 15%, rgba(77, 150, 255, 0.12) 0%, transparent 100%),
-                radial-gradient(circle 90px at 85% 85%, rgba(107, 203, 119, 0.12) 0%, transparent 100%),
-                radial-gradient(circle 110px at 15% 80%, rgba(255, 217, 61, 0.15) 0%, transparent 100%),
-                radial-gradient(circle 70px at 50% 50%, rgba(153, 102, 255, 0.1) 0%, transparent 100%);
+                radial-gradient(circle 120px at 15% 25%, rgba(29, 53, 87, 0.08) 0%, transparent 100%),
+                radial-gradient(circle 150px at 85% 20%, rgba(114, 9, 183, 0.08) 0%, transparent 100%),
+                radial-gradient(circle 130px at 80% 80%, rgba(43, 147, 72, 0.08) 0%, transparent 100%),
+                radial-gradient(circle 140px at 20% 75%, rgba(247, 127, 0, 0.08) 0%, transparent 100%);
             z-index: 1;
             pointer-events: none;
         }
         .hero-container { position: relative; z-index: 2; max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 20px; }
         .profile-pic-container {
-            width: 140px; height: 140px;
+            width: 150px; height: 150px;
             border-radius: 50%;
             padding: 4px;
-            background: var(--gradient);
+            background: linear-gradient(135deg, #1d3557, #7209b7);
             display: flex; align-items: center; justify-content: center;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 25px rgba(12, 27, 51, 0.15);
         }
         .profile-pic {
             width: 100%; height: 100%;
@@ -77,44 +76,44 @@
             background: #e2e8f0;
         }
         .hero-badge {
-            padding: 6px 16px;
-            background: var(--gradient);
-            color: #000;
+            padding: 6px 18px;
+            background: #1d3557;
+            color: #ffffff;
             font-weight: 700;
             border-radius: 50px;
             font-size: 0.75rem;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
-        h1 { font-size: 2.8rem; font-weight: 800; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        h1 { font-size: 2.8rem; font-weight: 800; color: var(--accent-blue); }
         p.subtitle { font-size: 1.15rem; color: var(--text-muted); max-width: 650px; }
 
         .container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; }
-        section { padding-top: 40px; margin-bottom: 40px; }
-        h2 { font-size: 2rem; margin-bottom: 25px; font-weight: 700; border-left: 5px solid var(--accent-blue); padding-left: 15px; }
+        section { padding-top: 50px; margin-bottom: 50px; }
+        h2 { font-size: 2rem; margin-bottom: 25px; font-weight: 700; color: var(--accent-blue); border-left: 5px solid var(--accent-blue); padding-left: 15px; }
 
         /* Grid Layouts & Cards */
         .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; }
         .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-        .card { background: var(--card-bg); border-radius: 16px; padding: 25px; border: 1px solid var(--border-color); transition: transform 0.3s ease, box-shadow 0.3s ease; }
-        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.05); border-color: var(--accent-blue); }
+        .card { background: var(--card-bg); border-radius: 16px; padding: 25px; border: 1px solid var(--border-color); transition: transform 0.3s ease, box-shadow 0.3s ease; box-shadow: 0 4px 12px rgba(12, 27, 51, 0.03); }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 12px 25px rgba(12, 27, 51, 0.08); border-color: var(--accent-blue); }
         .card h3 { font-size: 1.2rem; margin-bottom: 10px; color: var(--accent-blue); }
         .card ul { padding-left: 20px; margin-top: 10px; color: var(--text-muted); font-size: 0.92rem; }
         .card li { margin-bottom: 6px; }
 
-        /* Gallery Grid */
+        /* Gallery Grid with Real Attached Images */
         .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
-        .gallery-item { background: var(--card-bg); border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color); }
-        .image-placeholder { height: 160px; background: #e2e8f0; display: flex; align-items: center; justify-content: center; color: var(--text-muted); font-size: 0.85rem; border-bottom: 1px solid var(--border-color); }
+        .gallery-item { background: var(--card-bg); border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color); box-shadow: 0 4px 12px rgba(12, 27, 51, 0.03); }
+        .gallery-image { height: 180px; width: 100%; object-fit: cover; background: #e2e8f0; border-bottom: 1px solid var(--border-color); }
         .gallery-content { padding: 20px; }
         .gallery-content h4 { font-size: 1.1rem; margin-bottom: 8px; color: var(--accent-blue); }
         .gallery-content p { font-size: 0.9rem; color: var(--text-muted); }
 
         /* Tags */
         .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 15px; }
-        .tag { background: #e2e8f0; padding: 5px 12px; border-radius: 6px; font-size: 0.8rem; color: var(--text-main); font-weight: 500; }
+        .tag { background: #e6e0f8; padding: 5px 12px; border-radius: 6px; font-size: 0.8rem; color: var(--accent-blue); font-weight: 600; }
 
-        footer { text-align: center; padding: 40px; color: var(--text-muted); font-size: 0.9rem; border-top: 1px solid var(--border-color); margin-top: 40px; }
+        footer { text-align: center; padding: 40px; color: var(--text-muted); font-size: 0.9rem; border-top: 1px solid var(--border-color); margin-top: 40px; background: #eae4f5; }
     </style>
 </head>
 <body>
@@ -123,22 +122,22 @@
     <nav>
         <div class="nav-logo">Shubhangi Vijay</div>
         <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#region">Region</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#dei">DEI & Green</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#region" class="nav-link">Region</a></li>
+            <li><a href="#experience" class="nav-link">Experience</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#dei" class="nav-link">DEI & Green</a></li>
+            <li><a href="#gallery" class="nav-link">Gallery</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
     </nav>
 
-    <!-- Hero Section / Personal Photo Slot with Festive Background -->
-    <header>
+    <!-- Hero Section / Personal Photo Slot with Light Lavender & Party Splash BG -->
+    <header id="about">
         <div class="hero-container">
             <div class="profile-pic-container">
-                <!-- Replace src with your photo URL or filename -->
-                <img src="your-photo.jpg" alt="Shubhangi Vijay" class="profile-pic" onerror="this.style.display='none'">
+                <!-- Attached Personal Photo Added -->
+                <img src="ChatGPT Image Jul 23, 2026, 07_06_01 PM.png" alt="Shubhangi Vijay" class="profile-pic" onerror="this.style.display='none'">
             </div>
             <div class="hero-badge">Employee Experience & People Operations Specialist</div>
             <h1>Shubhangi Vijay</h1>
@@ -148,15 +147,15 @@
 
     <div class="container">
 
-        <!-- 1. ABOUT SECTION -->
-        <section id="about">
+        <!-- ABOUT SECTION -->
+        <section>
             <h2>About Me</h2>
             <div class="card">
                 <p>Results-driven HR Operations and Employee Experience professional with 10+ years of progressive experience managing end-to-end employee lifecycles, global stakeholder communications, engagement, and large-scale corporate events[cite: 1, 2]. Adept at adding the "razzle dazzle" and wow factor to workplace culture while ensuring meticulous operational execution[cite: 1, 2].</p>
             </div>
         </section>
 
-        <!-- 2. REGION SECTION -->
+        <!-- REGION SECTION -->
         <section id="region">
             <h2>Regional Expertise</h2>
             <div class="grid-2">
@@ -171,7 +170,7 @@
             </div>
         </section>
 
-        <!-- 3. EXPERIENCE SECTION (Aligned with JD & Resume) -->
+        <!-- EXPERIENCE SECTION -->
         <section id="experience">
             <h2>Professional Experience</h2>
             <div class="grid-2">
@@ -197,10 +196,10 @@
             </div>
         </section>
 
-        <!-- 4. PROJECTS SECTION -->
+        <!-- PROJECTS SECTION -->
         <section id="projects">
             <h2>Flagship Projects</h2>
-            <div class="card" style="border: 2px solid var(--accent-green);">
+            <div class="card" style="border: 2px solid var(--accent-blue);">
                 <h3>🌟 All India Meet (2 Consecutive Years - 150+ Employees)[cite: 1]</h3>
                 <p>Spearheaded comprehensive end-to-end operations and execution for large-scale multi-day national employee meets[cite: 1].</p>
                 <div class="tags">
@@ -218,7 +217,7 @@
             </div>
         </section>
 
-        <!-- 5. DEI & GREEN SECTION -->
+        <!-- DEI & GREEN SECTION -->
         <section id="dei">
             <h2>DEI, Community Service & Green Initiatives</h2>
             <div class="grid-3">
@@ -282,44 +281,58 @@
             </div>
         </section>
 
-        <!-- 6. GALLERY SECTION -->
+        <!-- GALLERY SECTION WITH REAL ATTACHED EVENT PHOTOS -->
         <section id="gallery">
             <h2>Event Gallery</h2>
-            <p style="color: var(--text-muted); margin-bottom: 25px;">A categorized visual showcase of past cultural celebrations, wellness challenges, and community events.</p>
+            <p style="color: var(--text-muted); margin-bottom: 25px;">A categorized visual showcase featuring real snapshots from past cultural celebrations, wellness challenges, and community events.</p>
             
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <div class="image-placeholder">Photo Slot</div>
+                    <img src="Hosting corporate event at SR.jpg" alt="Corporate Event Hosting" class="gallery-image">
                     <div class="gallery-content">
-                        <h4>Festive Parties & Celebrations</h4>
-                        <p>Diwali, Holi, Christmas, and Republic Day celebrations[cite: 1].</p>
+                        <h4>Corporate Event Hosting</h4>
+                        <p>Leading large-scale engagements and All India Meets with high energy[cite: 1].</p>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <div class="image-placeholder">Photo Slot</div>
+                    <img src="Womens' day celebration.jpg" alt="Women's Day Celebration" class="gallery-image">
                     <div class="gallery-content">
-                        <h4>Mental Wellness & DEI</h4>
-                        <p>Yoga Day, Pride committee events, and wellness bingo challenges[cite: 1].</p>
+                        <h4>Women's Day Celebration</h4>
+                        <p>Empowerment programs and regional appreciation sessions across APAC[cite: 1].</p>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <div class="image-placeholder">Photo Slot</div>
+                    <img src="Pride Parade.jpg" alt="Pride Parade & DEI" class="gallery-image">
                     <div class="gallery-content">
-                        <h4>Green & Community Drives</h4>
-                        <p>Plantation drives, blood donation camps, and seedball workshops[cite: 1].</p>
+                        <h4>Pride Parade & DEI</h4>
+                        <p>Active participation in Pride committee initiatives and cultural inclusion[cite: 1].</p>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <div class="image-placeholder">Photo Slot</div>
+                    <img src="Christmas celebration.jpg" alt="Christmas Celebration" class="gallery-image">
                     <div class="gallery-content">
-                        <h4>Culture Days & Leadership Townhalls</h4>
-                        <p>Executive dinners, P&C events, and happy hour games[cite: 1].</p>
+                        <h4>Festive Parties & Christmas</h4>
+                        <p>End-of-year celebrations, festive decor, and team gifting[cite: 1].</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="Animal Welfare event.jpg" alt="Animal Welfare & Community" class="gallery-image">
+                    <div class="gallery-content">
+                        <h4>Animal Welfare & Community</h4>
+                        <p>Community outreach, donation drives, and animal welfare support[cite: 1].</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="Trekking.jpg" alt="Trekking & Outdoor Drive" class="gallery-image">
+                    <div class="gallery-content">
+                        <h4>Trekking & Green Initiatives</h4>
+                        <p>Outdoor team building, trekking excursions, and eco-drives[cite: 1].</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 7. CONTACT SECTION -->
+        <!-- CONTACT SECTION -->
         <section id="contact">
             <h2>Get in Touch</h2>
             <div class="card" style="text-align: center;">
@@ -336,5 +349,19 @@
         <p>© 2026 Shubhangi Vijay | Employee Experience Specialist Portfolio</p>
     </footer>
 
+    <!-- Confetti Script Triggered on Navigation Click / Page Shift -->
+    <script>
+        document.querySelectorAll('.nav-link').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                // Trigger celebratory confetti pop-up
+                confetti({
+                    particleCount: 80,
+                    spread: 70,
+                    origin: { y: 0.2 },
+                    colors: ['#1d3557', '#7209b7', '#2b9348', '#f77f00']
+                });
+            });
+        });
+    </script>
 </body>
 </html>
