@@ -1,368 +1,749 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shubhangi Vijay | Employee Experience Specialist Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- Canvas Confetti Library -->
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-    <style>
-        :root {
-            --bg-color: #f3f0fa;
-            --card-bg: #ffffff;
-            --text-main: #0c1b33;
-            --text-muted: #334e68;
-            --accent-blue: #1d3557;
-            --accent-green: #2b9348;
-            --border-color: #d8cfea;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shubhangi Vijay — Employee Experience Specialist</title>
+<meta name="description" content="Shubhangi Vijay — Employee Experience & Event Coordination portfolio. 10+ years building belonging, wellbeing and unforgettable employee moments.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<style>
+  :root{
+    --ink:#0f1420;
+    --panel:#161c2c;
+    --panel-2:#1d2540;
+    --stroke:rgba(245,243,238,.12);
+    --stroke-soft:rgba(245,243,238,.07);
+    --text:#f5f3ee;
+    --muted:#a6adc4;
+    --coral:#ff6b4a;
+    --coral-soft:rgba(255,107,74,.14);
+    --teal:#2fd3c4;
+    --teal-soft:rgba(47,211,196,.14);
+    --gold:#ffc94a;
+    --gold-soft:rgba(255,201,74,.14);
+    --radius:18px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--ink);
+    color:var(--text);
+    font-family:'Inter',sans-serif;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif;letter-spacing:-0.01em;}
+  .mono{font-family:'IBM Plex Mono',monospace;}
+  a{color:inherit;}
+  ::selection{background:var(--coral);color:var(--ink);}
 
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
-        body { background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; }
+  /* subtle backdrop texture */
+  body::before{
+    content:'';
+    position:fixed; inset:0;
+    background:
+      radial-gradient(circle at 12% 8%, rgba(255,107,74,.10), transparent 40%),
+      radial-gradient(circle at 88% 18%, rgba(47,211,196,.09), transparent 42%),
+      radial-gradient(circle at 50% 95%, rgba(255,201,74,.07), transparent 45%);
+    pointer-events:none;
+    z-index:0;
+  }
 
-        /* Navigation Bar */
-        nav {
-            position: fixed;
-            top: 0; left: 0; width: 100%;
-            background: rgba(243, 240, 250, 0.95);
-            backdrop-filter: blur(10px);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 18px 40px;
-            z-index: 1000;
-            border-bottom: 1px solid var(--border-color);
-        }
-        .nav-logo { font-weight: 800; font-size: 1.2rem; color: var(--accent-blue); letter-spacing: 0.5px; }
-        .nav-links { display: flex; list-style: none; gap: 20px; }
-        .nav-links a { color: var(--text-muted); text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: color 0.3s; cursor: pointer; }
-        .nav-links a:hover { color: var(--accent-blue); }
+  /* progress bar (run-of-show cue) */
+  #progress{
+    position:fixed; top:0; left:0; height:3px; width:0%;
+    background:linear-gradient(90deg,var(--coral),var(--gold),var(--teal));
+    z-index:2000; transition:width .1s linear;
+  }
 
-        /* Hero Section with Light Lavender BG & Party Splash Abstract */
-        header {
-            padding: 160px 20px 90px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            background: var(--bg-color);
-        }
-        header::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background-image: 
-                radial-gradient(circle 140px at 15% 25%, rgba(29, 53, 87, 0.1) 0%, transparent 100%),
-                radial-gradient(circle 180px at 85% 20%, rgba(114, 9, 183, 0.1) 0%, transparent 100%),
-                radial-gradient(circle 150px at 80% 80%, rgba(43, 147, 72, 0.1) 0%, transparent 100%),
-                radial-gradient(circle 160px at 20% 75%, rgba(247, 127, 0, 0.1) 0%, transparent 100%);
-            z-index: 1;
-            pointer-events: none;
-        }
-        .hero-container { position: relative; z-index: 2; max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 20px; }
-        
-        /* Larger Personal Photo Frame */
-        .profile-pic-container {
-            width: 220px; height: 220px;
-            border-radius: 50%;
-            padding: 5px;
-            background: linear-gradient(135deg, #1d3557, #7209b7, #2b9348);
-            display: flex; align-items: center; justify-content: center;
-            box-shadow: 0 15px 35px rgba(12, 27, 51, 0.2);
-        }
-        .profile-pic {
-            width: 100%; height: 100%;
-            border-radius: 50%;
-            object-fit: cover;
-            background: #ffffff;
-        }
-        .hero-badge {
-            padding: 6px 18px;
-            background: #1d3557;
-            color: #ffffff;
-            font-weight: 700;
-            border-radius: 50px;
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        h1 { font-size: 2.8rem; font-weight: 800; color: var(--accent-blue); }
-        p.subtitle { font-size: 1.15rem; color: var(--text-muted); max-width: 650px; }
+  /* NAV */
+  nav{
+    position:fixed; top:0; left:0; width:100%; z-index:1000;
+    display:flex; align-items:center; justify-content:space-between;
+    padding:16px 40px;
+    background:rgba(15,20,32,.82);
+    backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--stroke-soft);
+  }
+  .nav-brand{display:flex; align-items:center; gap:10px;}
+  .nav-mark{
+    width:34px; height:34px; border-radius:9px;
+    background:linear-gradient(135deg,var(--coral),var(--gold));
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:.9rem; color:var(--ink);
+  }
+  .nav-brand span{font-weight:700; font-size:1rem; font-family:'Space Grotesk',sans-serif;}
+  .nav-links{display:flex; list-style:none; gap:2px;}
+  .nav-links a{
+    text-decoration:none; font-size:.82rem; font-weight:600; color:var(--muted);
+    padding:8px 14px; border-radius:999px; transition:all .25s;
+    letter-spacing:.01em;
+  }
+  .nav-links a:hover{color:var(--text);}
+  .nav-links a.active{color:var(--ink); background:var(--text);}
+  .nav-cta{
+    display:inline-block; font-size:.78rem; font-weight:700; text-decoration:none;
+    padding:9px 18px; border-radius:999px; background:transparent;
+    border:1px solid var(--stroke); color:var(--text); transition:all .25s;
+    font-family:'IBM Plex Mono',monospace;
+  }
+  .nav-cta:hover{border-color:var(--coral); color:var(--coral);}
+  .nav-toggle{display:none;}
 
-        .container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; }
-        section { padding-top: 50px; margin-bottom: 50px; }
-        h2 { font-size: 2rem; margin-bottom: 25px; font-weight: 700; color: var(--accent-blue); border-left: 5px solid var(--accent-blue); padding-left: 15px; }
+  /* HERO */
+  header{
+    position:relative; z-index:1;
+    padding:150px 40px 90px;
+    display:grid; grid-template-columns:1.1fr .9fr; gap:60px; align-items:center;
+    max-width:1180px; margin:0 auto;
+  }
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    font-family:'IBM Plex Mono',monospace; font-size:.72rem; font-weight:600;
+    letter-spacing:.08em; text-transform:uppercase; color:var(--gold);
+    background:var(--gold-soft); border:1px solid rgba(255,201,74,.35);
+    padding:6px 12px; border-radius:999px; margin-bottom:22px;
+  }
+  .eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--gold);}
+  header h1{font-size:3.4rem; font-weight:700; line-height:1.05; margin-bottom:18px;}
+  header h1 em{font-style:normal; color:var(--coral);}
+  .hero-role{font-size:1.15rem; color:var(--teal); font-weight:600; margin-bottom:16px; font-family:'Space Grotesk',sans-serif;}
+  .hero-copy{color:var(--muted); font-size:1.02rem; max-width:520px; margin-bottom:30px;}
+  .hero-actions{display:flex; gap:12px; flex-wrap:wrap;}
+  .btn{
+    display:inline-flex; align-items:center; gap:8px; text-decoration:none;
+    padding:13px 24px; border-radius:12px; font-weight:700; font-size:.9rem;
+    transition:transform .2s, box-shadow .2s;
+  }
+  .btn-primary{background:var(--coral); color:var(--ink); box-shadow:0 8px 24px rgba(255,107,74,.25);}
+  .btn-primary:hover{transform:translateY(-2px); box-shadow:0 12px 28px rgba(255,107,74,.35);}
+  .btn-ghost{border:1px solid var(--stroke); color:var(--text);}
+  .btn-ghost:hover{border-color:var(--teal); color:var(--teal); transform:translateY(-2px);}
 
-        /* Grid Layouts & Cards */
-        .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; }
-        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-        .card { background: var(--card-bg); border-radius: 16px; padding: 25px; border: 1px solid var(--border-color); transition: transform 0.3s ease, box-shadow 0.3s ease; box-shadow: 0 4px 12px rgba(12, 27, 51, 0.03); }
-        .card:hover { transform: translateY(-5px); box-shadow: 0 12px 25px rgba(12, 27, 51, 0.08); border-color: var(--accent-blue); }
-        .card h3 { font-size: 1.2rem; margin-bottom: 10px; color: var(--accent-blue); }
-        .card ul { padding-left: 20px; margin-top: 10px; color: var(--text-muted); font-size: 0.92rem; }
-        .card li { margin-bottom: 6px; }
+  .stat-row{display:flex; gap:28px; margin-top:42px; flex-wrap:wrap;}
+  .stat b{display:block; font-family:'Space Grotesk',sans-serif; font-size:1.5rem; color:var(--text);}
+  .stat span{font-size:.75rem; color:var(--muted); text-transform:uppercase; letter-spacing:.05em; font-family:'IBM Plex Mono',monospace;}
 
-        /* Gallery Grid */
-        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
-        .gallery-item { background: var(--card-bg); border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color); box-shadow: 0 4px 12px rgba(12, 27, 51, 0.03); }
-        .gallery-image { height: 180px; width: 100%; object-fit: cover; background: #e2e8f0; border-bottom: 1px solid var(--border-color); }
-        .gallery-content { padding: 20px; }
-        .gallery-content h4 { font-size: 1.1rem; margin-bottom: 8px; color: var(--accent-blue); }
-        .gallery-content p { font-size: 0.9rem; color: var(--text-muted); }
+  /* ID badge */
+  .badge-wrap{display:flex; justify-content:center; align-items:flex-start; position:relative;}
+  .lanyard{width:3px; height:60px; background:repeating-linear-gradient(180deg,var(--coral) 0 8px, var(--gold) 8px 16px); margin:0 auto; border-radius:2px;}
+  .id-card{
+    width:340px; background:var(--panel); border:1px solid var(--stroke);
+    border-radius:24px; padding:26px; text-align:center; position:relative;
+    box-shadow:0 30px 60px rgba(0,0,0,.45);
+    transform:rotate(2deg);
+  }
+  .id-card::before{
+    content:''; position:absolute; top:16px; left:50%; transform:translateX(-50%);
+    width:52px; height:9px; border-radius:6px; background:var(--ink); border:1px solid var(--stroke);
+  }
+  .photo-frame{
+    width:230px; height:230px; border-radius:20px; margin:30px auto 18px;
+    background:linear-gradient(135deg,var(--coral),var(--teal));
+    padding:5px; position:relative; cursor:pointer;
+  }
+  .photo-inner{
+    width:100%; height:100%; border-radius:16px; overflow:hidden; position:relative;
+    background:var(--panel-2); display:flex; align-items:center; justify-content:center;
+  }
+  .photo-inner img{width:100%; height:100%; object-fit:cover; position:absolute; inset:0;}
+  .photo-fallback{font-family:'Space Grotesk',sans-serif; font-size:3.4rem; font-weight:700; color:var(--text);}
+  .id-card h4{font-size:1.3rem; margin-bottom:4px;}
+  .id-card .id-role{font-size:.82rem; color:var(--coral); font-weight:700; margin-bottom:8px; font-family:'Space Grotesk',sans-serif;}
+  .id-card p{font-size:.78rem; color:var(--muted); font-family:'IBM Plex Mono',monospace;}
+  .id-tag{
+    display:inline-block; margin-top:16px; font-size:.72rem; font-family:'IBM Plex Mono',monospace;
+    color:var(--teal); background:var(--teal-soft); padding:5px 12px; border-radius:999px;
+    border:1px solid rgba(47,211,196,.3);
+  }
 
-        /* Tags */
-        .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 15px; }
-        .tag { background: #e6e0f8; padding: 5px 12px; border-radius: 6px; font-size: 0.8rem; color: var(--accent-blue); font-weight: 600; }
+  /* SECTIONS */
+  .container{max-width:1180px; margin:0 auto; padding:0 40px;}
+  section{position:relative; z-index:1; padding:80px 0;}
+  .section-head{margin-bottom:40px; max-width:640px;}
+  .section-head .eyebrow{margin-bottom:14px;}
+  .section-head h2{font-size:2.1rem; font-weight:700; margin-bottom:10px;}
+  .section-head p{color:var(--muted); font-size:.98rem;}
 
-        footer { text-align: center; padding: 40px; color: var(--text-muted); font-size: 0.9rem; border-top: 1px solid var(--border-color); margin-top: 40px; background: #eae4f5; }
-    </style>
+  .grid-2{display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:22px;}
+  .grid-3{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px;}
+
+  .card{
+    background:var(--panel); border:1px solid var(--stroke); border-radius:var(--radius);
+    padding:26px; position:relative; overflow:hidden; transition:transform .25s, border-color .25s;
+  }
+  .card::before{content:''; position:absolute; top:0; left:0; right:0; height:3px;}
+  .card.c-coral::before{background:var(--coral);}
+  .card.c-teal::before{background:var(--teal);}
+  .card.c-gold::before{background:var(--gold);}
+  .card:hover{transform:translateY(-4px); border-color:var(--stroke);}
+  .card h3{font-size:1.12rem; margin-bottom:10px;}
+  .card ul{padding-left:18px; color:var(--muted); font-size:.9rem;}
+  .card li{margin-bottom:7px;}
+  .card p.lead{color:var(--muted); font-size:.92rem;}
+
+  .tags{display:flex; flex-wrap:wrap; gap:8px; margin-top:16px;}
+  .tag{
+    font-size:.72rem; font-weight:600; padding:6px 12px; border-radius:999px;
+    background:var(--panel-2); border:1px solid var(--stroke); color:var(--text);
+    font-family:'IBM Plex Mono',monospace;
+  }
+
+  /* skills strip in about */
+  .skill-block{margin-top:26px;}
+  .skill-block h4{font-size:.75rem; text-transform:uppercase; letter-spacing:.06em; color:var(--gold); margin-bottom:10px; font-family:'IBM Plex Mono',monospace;}
+
+  /* EXPERIENCE - run of show */
+  .rundown{border-left:2px solid var(--stroke); margin-left:8px;}
+  .rundown-item{position:relative; padding:0 0 44px 34px;}
+  .rundown-item:last-child{padding-bottom:0;}
+  .rundown-item::before{
+    content:''; position:absolute; left:-7px; top:2px; width:12px; height:12px; border-radius:50%;
+    background:var(--ink); border:2px solid var(--coral);
+  }
+  .rundown-item:nth-child(2)::before{border-color:var(--teal);}
+  .rundown-item:nth-child(3)::before{border-color:var(--gold);}
+  .cue{font-family:'IBM Plex Mono',monospace; font-size:.72rem; color:var(--coral); text-transform:uppercase; letter-spacing:.06em;}
+  .rundown-item:nth-child(2) .cue{color:var(--teal);}
+  .rundown-item:nth-child(3) .cue{color:var(--gold);}
+  .rundown-item h3{font-size:1.5rem; margin:8px 0 3px;}
+  .rundown-item .org{color:var(--muted); font-size:.95rem; margin-bottom:18px;}
+  .rundown-item ul{padding-left:20px; color:var(--muted); font-size:1rem; line-height:1.75;}
+  .rundown-item li{margin-bottom:11px;}
+  .rundown-item h5{font-size:.72rem; text-transform:uppercase; letter-spacing:.07em; color:var(--gold); margin:18px 0 8px; font-family:'IBM Plex Mono',monospace;}
+  .rundown-item h5:first-of-type{margin-top:0;}
+
+  /* GALLERY */
+  .gallery-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(270px,1fr)); gap:20px;}
+  .gallery-item{
+    background:var(--panel); border:1px solid var(--stroke); border-radius:var(--radius); overflow:hidden;
+  }
+  .gallery-visual{
+    height:200px; position:relative; overflow:hidden;
+    background:var(--panel-2);
+  }
+  .gallery-visual img{width:100%; height:100%; object-fit:cover; display:block; transition:transform .4s;}
+  .gallery-item:hover .gallery-visual img{transform:scale(1.05);}
+  .gallery-content{padding:18px 20px 22px;}
+  .gallery-content h4{font-size:1rem; margin-bottom:6px;}
+  .gallery-content p{font-size:.85rem; color:var(--muted);}
+
+  /* CONTACT */
+  .contact-card{
+    background:var(--panel); border:1px solid var(--stroke); border-radius:24px;
+    padding:48px; text-align:center; position:relative; overflow:hidden;
+  }
+  .contact-card::after{
+    content:''; position:absolute; inset:0;
+    background:radial-gradient(circle at 50% 0%, rgba(255,107,74,.12), transparent 60%);
+    pointer-events:none;
+  }
+  .contact-card h2{font-size:1.9rem; margin-bottom:12px;}
+  .contact-card p{color:var(--muted); max-width:480px; margin:0 auto 26px;}
+  .contact-links{display:flex; gap:14px; justify-content:center; flex-wrap:wrap; margin-top:8px;}
+  .contact-links a{
+    font-size:.85rem; font-weight:600; padding:10px 18px; border-radius:999px;
+    border:1px solid var(--stroke); text-decoration:none; font-family:'IBM Plex Mono',monospace;
+    transition:all .25s;
+  }
+  .contact-links a:hover{border-color:var(--gold); color:var(--gold);}
+
+  footer{
+    text-align:center; padding:36px 20px; color:var(--muted); font-size:.82rem;
+    border-top:1px solid var(--stroke-soft); position:relative; z-index:1;
+  }
+
+  @media(max-width:860px){
+    nav{padding:14px 20px;}
+    .nav-links{display:none;}
+    header{grid-template-columns:1fr; padding:130px 24px 60px; text-align:center;}
+    .hero-copy{margin-left:auto; margin-right:auto;}
+    .hero-actions, .stat-row{justify-content:center;}
+    header h1{font-size:2.4rem;}
+    .container{padding:0 22px;}
+    .badge-wrap{margin-top:10px;}
+  }
+</style>
 </head>
 <body>
 
-    <!-- Navigation Bar -->
-    <nav>
-        <div class="nav-logo">Shubhangi Vijay</div>
-        <ul class="nav-links">
-            <li><a href="#about" class="nav-link">About</a></li>
-            <li><a href="#region" class="nav-link">Region</a></li>
-            <li><a href="#experience" class="nav-link">Experience</a></li>
-            <li><a href="#projects" class="nav-link">Projects</a></li>
-            <li><a href="#dei" class="nav-link">DEI & Green</a></li>
-            <li><a href="#gallery" class="nav-link">Gallery</a></li>
-            <li><a href="#contact" class="nav-link">Contact</a></li>
-        </ul>
-    </nav>
+<div id="progress"></div>
 
-    <!-- Hero Section with Larger Personal Photo & Party Splash BG -->
-    <header id="about">
-        <div class="hero-container">
-            <div class="profile-pic-container">
-                <!-- Attached Personal Photo Added (Large Display) -->
-                <img src="ChatGPT Image Jul 23, 2026, 07_06_01 PM.png" alt="Shubhangi Vijay" class="profile-pic" onerror="this.style.display='none'">
-            </div>
-            <div class="hero-badge">Employee Experience & People Operations Specialist</div>
-            <h1>Shubhangi Vijay</h1>
-            <p class="subtitle">Strengthening sense of belonging, driving world-class employee wellbeing, and orchestrating high-impact corporate events with passion and precision.</p>
+<nav>
+  <div class="nav-brand">
+    <div class="nav-mark">SV</div>
+    <span>Shubhangi Vijay</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#about" class="navlink">About</a></li>
+    <li><a href="#region" class="navlink">Region</a></li>
+    <li><a href="#experience" class="navlink">Experience</a></li>
+    <li><a href="#projects" class="navlink">Projects</a></li>
+    <li><a href="#dei" class="navlink">DEI &amp; Green</a></li>
+    <li><a href="#gallery" class="navlink">Gallery</a></li>
+    <li><a href="#contact" class="navlink">Contact</a></li>
+  </ul>
+  <a class="nav-cta" href="assets/docs/Shubhangi_Vijay_Resume.pdf" target="_blank" rel="noopener">Resume ↓</a>
+</nav>
+
+<!-- HERO -->
+<header id="about">
+  <div class="hero-text">
+    <div class="eyebrow"><span class="dot"></span> Employee Experience Specialist</div>
+    <h1>Belonging, built<br>with <em>razzle dazzle.</em></h1>
+    <div class="hero-role">Employee Experience Specialist — 10+ years, APAC → Global</div>
+    <p class="hero-copy">I plan, produce and run the moments that make people proud to work somewhere — from a Friday happy hour to a 150-person national meet. Full-cycle event production, employee wellbeing programming, and vendor &amp; stakeholder management, with the operational discipline to back up the wow factor.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="mailto:shubhangivj19@gmail.com">Let's talk</a>
+      <a class="btn btn-ghost" href="#experience">See the run of show ↓</a>
+    </div>
+    <div class="stat-row">
+      <div class="stat"><b>10+ yrs</b><span>HR &amp; Events</span></div>
+      <div class="stat"><b>150+</b><span>Employees / flagship event</span></div>
+      <div class="stat"><b>25%↑</b><span>Engagement participation</span></div>
+      <div class="stat"><b>6</b><span>APAC markets run</span></div>
+    </div>
+  </div>
+  <div class="badge-wrap">
+    <div>
+      <div class="lanyard"></div>
+      <div class="id-card">
+        <span class="mono" style="font-size:.68rem;color:var(--muted);">ALL ACCESS · STAFF</span>
+        <div class="photo-frame" id="photoTrigger" title="Click for confetti">
+          <div class="photo-inner">
+            <img src="assets/img/profile.jpg" alt="Shubhangi Vijay" onerror="this.style.display='none'; document.getElementById('photoFallback').style.display='flex';">
+            <div class="photo-fallback" id="photoFallback" style="display:none;">SV</div>
+          </div>
         </div>
-    </header>
+        <h4>Shubhangi Vijay</h4>
+        <div class="id-role">Employee Experience Specialist</div>
+        <p>Pune, Maharashtra, IN</p>
+        <span class="id-tag">Open to relocation / hybrid</span>
+      </div>
+    </div>
+  </div>
+</header>
 
-    <div class="container">
+<div class="container">
 
-        <!-- ABOUT SECTION -->
-        <section>
-            <h2>About Me</h2>
-            <div class="card">
-                <p>Results-driven HR Operations and Employee Experience professional with 10+ years of progressive experience managing end-to-end employee lifecycles, global stakeholder communications, engagement, and large-scale corporate events. Adept at adding the razzle dazzle and wow factor to workplace culture while ensuring meticulous operational execution.</p>
-            </div>
-        </section>
+  <!-- ABOUT -->
+  <section>
+    <div class="section-head">
+      <div class="eyebrow"><span class="dot"></span> About</div>
+      <h2>The short version</h2>
+      <p>Results-driven HR Operations and Employee Experience professional who treats culture like a production: plan hard, execute harder, and never let the seams show.</p>
+    </div>
+    <div class="grid-2">
+      <div class="card c-coral">
+        <h3>What I actually do</h3>
+        <p class="lead">Ten-plus years managing end-to-end employee lifecycles, global stakeholder communication, and large-scale corporate events across APAC. I've built engagement programs from a blank page, localized global HR Centre-of-Excellence initiatives for regional teams, and kept every event — virtual or on the ground — running on time and on budget.</p>
+        <div class="skill-block">
+          <h4>Event Management</h4>
+          <div class="tags">
+            <span class="tag">End-to-end production</span>
+            <span class="tag">Vendor &amp; venue</span>
+            <span class="tag">Run-of-show</span>
+            <span class="tag">Budget tracking</span>
+            <span class="tag">Onsite logistics</span>
+          </div>
+        </div>
+        <div class="skill-block">
+          <h4>Employee Experience</h4>
+          <div class="tags">
+            <span class="tag">Wellbeing programs</span>
+            <span class="tag">DEI initiatives</span>
+            <span class="tag">Culture calendar</span>
+            <span class="tag">Stakeholder comms</span>
+          </div>
+        </div>
+      </div>
+      <div class="card c-teal">
+        <h3>Education &amp; certifications</h3>
+        <ul>
+          <li>Master of Commerce (ABST) — University of Rajasthan</li>
+          <li>Diploma in Event Management &amp; PR — NAEMD, Jaipur</li>
+          <li>B.Com (Hons.) — Maharani College, University of Rajasthan</li>
+          <li>Certified Strategic HR Leader · Certified DE&amp;I Specialist</li>
+          <li>Generative AI for HR · Google AI Professional</li>
+          <li>Certified HR Metrics &amp; Dashboarding Specialist</li>
+        </ul>
+        <div class="skill-block">
+          <h4>Tools I run on</h4>
+          <div class="tags">
+            <span class="tag">M365 Copilot</span>
+            <span class="tag">Cvent-type platforms</span>
+            <span class="tag">Salesforce</span>
+            <span class="tag">Monday.com</span>
+            <span class="tag">ADP Workforce Now</span>
+            <span class="tag">Tableau</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <!-- REGION SECTION -->
-        <section id="region">
-            <h2>Regional Expertise</h2>
-            <div class="grid-2">
-                <div class="card">
-                    <h3>APAC Markets</h3>
-                    <p>Skilled in managing cross-border employment operations, documentation, and employee lifecycle logistics across India, Philippines, Singapore, Malaysia, Indonesia, and Australia.</p>
-                </div>
-                <div class="card">
-                    <h3>Local Workplace Engagement</h3>
-                    <p>Designing hybrid office culture initiatives, on-site experiences, and region-specific welfare activities that build high engagement and collaboration.</p>
-                </div>
-            </div>
-        </section>
+  <!-- REGION -->
+  <section id="region">
+    <div class="section-head">
+      <div class="eyebrow"><span class="dot"></span> Region</div>
+      <h2>Built for multi-market, ready for global</h2>
+      <p>Six years of running employee experience across borders, time zones and cultures — the exact muscle a hybrid, multi-office footprint needs.</p>
+    </div>
+    <div class="grid-2">
+      <div class="card c-gold">
+        <h3>APAC operating experience</h3>
+        <p class="lead">Managed cross-border employee lifecycle operations, documentation, and on-the-ground logistics across India, the Philippines, Singapore, Malaysia, Indonesia and Australia — coordinating everything from visa-adjacent travel support to region-specific welfare programs.</p>
+      </div>
+      <div class="card c-coral">
+        <h3>Local-office energy, global consistency</h3>
+        <p class="lead">Adept at taking a global Centre-of-Excellence initiative and making it feel like it was built for the room it's landing in — hybrid office culture, on-site experiences, and local celebrations layered on top of a consistent global engagement strategy. Comfortable being the on-the-ground owner for a US office team while partnering with HR, Finance, Procurement and Facilities.</p>
+      </div>
+    </div>
+  </section>
 
-        <!-- EXPERIENCE SECTION -->
-        <section id="experience">
-            <h2>Professional Experience</h2>
-            <div class="grid-2">
-                <div class="card">
-                    <h3>Senior Associate - People & HR Operations</h3>
-                    <p style="color: var(--accent-green); font-size: 0.9rem; margin-bottom: 10px;">Spaulding Ridge | Nov 2021 – Present</p>
-                    <ul>
-                        <li>Led end-to-end employee engagement, wellbeing programs, and large-scale event production, increasing participation by 25%.</li>
-                        <li>Managed onboarding and pre-boarding logistics for 80+ annual APAC hires, guaranteeing day-one readiness.</li>
-                        <li>Conducted 100+ employee check-ins annually to identify retention risks and channel feedback to leadership.</li>
-                        <li>Coordinated learning and development initiatives, internship cohorts, and Consulting for Success series for APAC employees.</li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <h3>HR Manager</h3>
-                    <p style="color: var(--accent-green); font-size: 0.9rem; margin-bottom: 10px;">Samaksh Enterprises | Jul 2015 – Aug 2021</p>
-                    <ul>
-                        <li>Independently managed the full employee lifecycle, attendance, compliance, and employee relations for 40+ staff.</li>
-                        <li>Handled event logistics, on-ground operations, accommodation, and stipend coordination for 100+ interns across events.</li>
-                        <li>Managed stakeholder communication, vendor coordination, and operational delivery for 25+ client accounts.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="section-head">
+      <div class="eyebrow"><span class="dot"></span> Experience</div>
+      <h2>The run of show</h2>
+      <p>Every role, in order — like the event timeline I'd build for you.</p>
+    </div>
+    <div class="rundown">
+      <div class="rundown-item">
+        <div class="cue">Nov 2021 — Present</div>
+        <h3>Senior Event Coordinator &amp; People Operations Specialist</h3>
+        <div class="org">Spaulding Ridge · Pune, India</div>
 
-        <!-- PROJECTS SECTION -->
-        <section id="projects">
-            <h2>Flagship Projects</h2>
-            <div class="card" style="border: 2px solid var(--accent-blue);">
-                <h3>All India Meet (2 Consecutive Years - 150+ Employees)</h3>
-                <p>Spearheaded comprehensive end-to-end operations and execution for large-scale multi-day national employee meets.</p>
-                <div class="tags">
-                    <span class="tag">Travel Booking & Logistics (80+ Employees)</span>
-                    <span class="tag">Venue Finalization</span>
-                    <span class="tag">Budget Approvals</span>
-                    <span class="tag">Menu Engineering & Curation</span>
-                    <span class="tag">On-Ground Production</span>
-                    <span class="tag">Marketing Campaigns</span>
-                    <span class="tag">Photography Management</span>
-                    <span class="tag">Itinerary Coordination</span>
-                    <span class="tag">Employee Communications</span>
-                    <span class="tag">Custom Swag Finalization</span>
-                </div>
-            </div>
-        </section>
+        <h5>Event Planning &amp; Execution</h5>
+        <ul>
+          <li>Own end-to-end employee engagement, wellbeing programming, and event production for APAC — increased participation 25% year over year.</li>
+          <li>Spearheaded the All India Meet, two years running: 150+ employees, 80+ travelers, full venue-to-swag production.</li>
+          <li>Organized corporate events for 100–150 employees — full-cycle planning, venue sourcing, catering, AV, branding, and onsite/virtual execution.</li>
+          <li>Planned and executed DEI events, wellness programs, and cultural engagement activities at short notice, alongside active performance cycles.</li>
+          <li>Developed run-of-show documents, event checklists, and project timelines to ensure flawless execution of onsite and offsite events.</li>
+          <li>Served as primary point of contact for employee event inquiries, registration support, and event-related communications across APAC.</li>
+        </ul>
 
-        <!-- DEI & GREEN SECTION -->
-        <section id="dei">
-            <h2>DEI, Community Service & Green Initiatives</h2>
-            <div class="grid-3">
-                <div class="card">
-                    <h3>Diversity, Equity & Inclusion</h3>
-                    <ul>
-                        <li>Pride Parade coordination & active member of the Proud committee.</li>
-                        <li>Representing Indian culture on global corporate calls.</li>
-                        <li>Mental wellness initiatives & Yoga Day celebrations.</li>
-                        <li>Women's Day APAC empowerment programs.</li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <h3>Green & Eco Initiatives</h3>
-                    <ul>
-                        <li>Plantation drives & trekking events.</li>
-                        <li>Paper bag making workshops.</li>
-                        <li>Seedball making sessions.</li>
-                        <li>Bird feeder decoration activities.</li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <h3>Community Service</h3>
-                    <ul>
-                        <li>Donation in kind drives.</li>
-                        <li>Fundraisers for social welfare.</li>
-                        <li>Blood donation camps.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+        <h5>Event Technology &amp; Operations</h5>
+        <ul>
+          <li>Managed event registration workflows, attendee tracking, and post-event reporting using digital event platforms; built and maintained registration flows, communications, agendas, and event branding.</li>
+          <li>Tracked event budgets, vendor invoices, and contracts, ensuring cost efficiency and compliance; coordinated with Finance and Operations for approvals and reconciliation.</li>
+          <li>Leveraged AI automation tools and M365 Copilot to streamline event reporting workflows, cutting manual coordination effort ~30%.</li>
+          <li>Built RAG-based workforce analytics dashboards to generate post-event insights on participation and engagement trends for leadership.</li>
+        </ul>
 
-        <!-- CORPORATE INITIATIVES SUB-SECTION -->
-        <section>
-            <h2>Corporate Culture & Wellness Initiatives</h2>
-            <div class="grid-3">
-                <div class="card">
-                    <h3>Celebrations & Festivities</h3>
-                    <ul>
-                        <li>Diwali & Holi parties (2025 & 2026).</li>
-                        <li>Christmas celebrations & gifting.</li>
-                        <li>Republic Day & People & Culture Days.</li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <h3>Engagement & Connection</h3>
-                    <ul>
-                        <li>Friday Happy Hours: Games & All-India virtual calls.</li>
-                        <li>Mental Wellness Bingo challenges.</li>
-                        <li>P&C day cultural event hosting & coordination.</li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <h3>Operations & Leadership</h3>
-                    <ul>
-                        <li>Leadership visits: Lunches, dinners & townhalls.</li>
-                        <li>Daily lunch facilitation & vendor management.</li>
-                        <li>Annual swag design & finalization.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+        <h5>Employee Experience &amp; Stakeholder Coordination</h5>
+        <ul>
+          <li>Partnered with HR, IT, Communications, and Finance stakeholders to deliver seamless employee experiences from pre-event planning through post-event debrief.</li>
+          <li>Ran onboarding &amp; pre-boarding logistics for 80+ annual APAC hires, guaranteeing day-one readiness.</li>
+          <li>Coordinated international travel logistics — accommodations, transport, and documentation support — liaising with immigration and visa resources for cross-border employee travel.</li>
+          <li>Maintained strong vendor, partner, and hotel relationships — negotiated contracts, coordinated on-ground execution, and managed production and hospitality logistics.</li>
+          <li>Conducted 100+ employee check-ins annually, feeding engagement insights to leadership to shape future event programming and culture initiatives.</li>
+        </ul>
+      </div>
 
-        <!-- GALLERY SECTION WITH REAL ATTACHED EVENT PHOTOS -->
-        <section id="gallery">
-            <h2>Event Gallery</h2>
-            <p style="color: var(--text-muted); margin-bottom: 25px;">A categorized visual showcase featuring real snapshots from past cultural celebrations, wellness challenges, and community events.</p>
-            
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="Hosting corporate event at SR.jpg" alt="Corporate Event Hosting" class="gallery-image">
-                    <div class="gallery-content">
-                        <h4>Corporate Event Hosting</h4>
-                        <p>Leading large-scale engagements and All India Meets with high energy.</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="Womens' day celebration.jpg" alt="Women's Day Celebration" class="gallery-image">
-                    <div class="gallery-content">
-                        <h4>Women's Day Celebration</h4>
-                        <p>Empowerment programs and regional appreciation sessions across APAC.</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="Pride Parade.jpg" alt="Pride Parade & DEI" class="gallery-image">
-                    <div class="gallery-content">
-                        <h4>Pride Parade & DEI</h4>
-                        <p>Active participation in Pride committee initiatives and cultural inclusion.</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="Christmas celebration.jpg" alt="Christmas Celebration" class="gallery-image">
-                    <div class="gallery-content">
-                        <h4>Festive Parties & Christmas</h4>
-                        <p>End-of-year celebrations, festive decor, and team gifting.</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="Animal Welfare event.jpg" alt="Animal Welfare & Community" class="gallery-image">
-                    <div class="gallery-content">
-                        <h4>Animal Welfare & Community</h4>
-                        <p>Community outreach, donation drives, and animal welfare support.</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="Trekking.jpg" alt="Trekking & Outdoor Drive" class="gallery-image">
-                    <div class="gallery-content">
-                        <h4>Trekking & Green Initiatives</h4>
-                        <p>Outdoor team building, trekking excursions, and eco-drives.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+      <div class="rundown-item">
+        <div class="cue">Jul 2015 — Aug 2021</div>
+        <h3>HR Manager &amp; Event Operations Lead</h3>
+        <div class="org">Samaksh Enterprises Pvt. Ltd. · Jaipur, India</div>
+        <ul>
+          <li>Owned full employee lifecycle, attendance, compliance and employee relations for 40+ staff.</li>
+          <li>Handled multiple corporate events end-to-end — from logistics to planning to execution — across concurrent client programs.</li>
+          <li>Planned and executed large-scale corporate events — managing full lifecycle from concept to execution, including vendor coordination, workforce management, and onsite operations.</li>
+          <li>Ran logistics, accommodation and stipend coordination for 100+ interns across concurrent programs and events.</li>
+          <li>Handled design, branding, print management, swag/stationery procurement, and hotel coordination for corporate events.</li>
+          <li>Managed stakeholder communication, vendor coordination and delivery for 25+ client accounts — presentation to delivery.</li>
+        </ul>
+      </div>
 
-        <!-- CONTACT SECTION -->
-        <section id="contact">
-            <h2>Get in Touch</h2>
-            <div class="card" style="text-align: center;">
-                <p style="margin-bottom: 15px; color: var(--text-muted);">Ready to bring high energy and exceptional employee experiences to your organization?</p>
-                <p><strong>Email:</strong> shubhangivj19@gmail.com</p>
-                <p><strong>LinkedIn:</strong> linkedin.com/in/shubhangivijay-584530217</p>
-                <p><strong>Location:</strong> Pune, Maharashtra, India</p>
-            </div>
-        </section>
+      <div class="rundown-item">
+        <div class="cue">Mar 2013 — Aug 2015</div>
+        <h3>Event Coordinator — Freelance &amp; Early Career</h3>
+        <div class="org">NAEMD + Freelance · India</div>
+        <ul>
+          <li>Coordinated onsite events end to end: workforce, vendor placement, production, logistics and hospitality.</li>
+          <li>Managed guest lists, security, catering, entertainment, transport and décor for corporate &amp; cultural events.</li>
+          <li>Built and maintained vendor/venue databases, budgets and flow charts; troubleshot day-of, in real time.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="section-head">
+      <div class="eyebrow"><span class="dot"></span> Projects</div>
+      <h2>Flagship: The All India Meet</h2>
+      <p>Two consecutive years. 150+ employees. Zero dropped balls.</p>
+    </div>
+    <div class="card c-teal">
+      <h3>End-to-end national employee meet</h3>
+      <p class="lead">Spearheaded comprehensive operations for a multi-day, national-scale employee gathering — owning everything from the first venue call to the last swag box, twice in a row.</p>
+      <div class="tags">
+        <span class="tag">Travel for 80+ employees</span>
+        <span class="tag">Venue finalization</span>
+        <span class="tag">Budget approvals</span>
+        <span class="tag">Menu curation</span>
+        <span class="tag">On-ground production</span>
+        <span class="tag">Marketing campaigns</span>
+        <span class="tag">Photography management</span>
+        <span class="tag">Itinerary coordination</span>
+        <span class="tag">Employee communications</span>
+        <span class="tag">Custom swag</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEI & GREEN -->
+  <section id="dei">
+    <div class="section-head">
+      <div class="eyebrow"><span class="dot"></span> DEI, Community &amp; Green</div>
+      <h2>Culture work that shows up in person</h2>
+      <p>Belonging isn't a slide — it's Pride Parade day, plantation drives, and a bingo card that gets people talking about mental health.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card c-coral">
+        <h3>Diversity, Equity &amp; Inclusion</h3>
+        <ul>
+          <li>Pride Parade coordination &amp; active Proud committee member</li>
+          <li>Represented Indian culture on global corporate calls</li>
+          <li>Mental wellness initiatives &amp; Yoga Day celebrations</li>
+          <li>Women's Day APAC empowerment programs</li>
+        </ul>
+      </div>
+      <div class="card c-teal">
+        <h3>Green &amp; eco initiatives</h3>
+        <ul>
+          <li>Plantation drives &amp; trekking events</li>
+          <li>Paper bag making workshops</li>
+          <li>Seedball making sessions</li>
+          <li>Bird feeder decoration activities</li>
+        </ul>
+      </div>
+      <div class="card c-gold">
+        <h3>Community service</h3>
+        <ul>
+          <li>Donation-in-kind drives</li>
+          <li>Fundraisers for social welfare</li>
+          <li>Blood donation camps</li>
+        </ul>
+      </div>
+    </div>
+    <div class="grid-3" style="margin-top:20px;">
+      <div class="card c-gold">
+        <h3>Celebrations &amp; festivities</h3>
+        <ul>
+          <li>Diwali &amp; Holi parties (2025 &amp; 2026)</li>
+          <li>Christmas celebrations &amp; gifting</li>
+          <li>Republic Day &amp; People &amp; Culture Days</li>
+        </ul>
+      </div>
+      <div class="card c-coral">
+        <h3>Engagement &amp; connection</h3>
+        <ul>
+          <li>Friday Happy Hours — games &amp; all-India virtual calls</li>
+          <li>Mental Wellness Bingo challenges</li>
+          <li>P&amp;C Day cultural event hosting &amp; coordination</li>
+        </ul>
+      </div>
+      <div class="card c-teal">
+        <h3>Operations &amp; leadership support</h3>
+        <ul>
+          <li>Leadership visits — lunches, dinners &amp; townhalls</li>
+          <li>Daily lunch facilitation &amp; vendor management</li>
+          <li>Annual swag design &amp; finalization</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery">
+    <div class="section-head">
+      <div class="eyebrow"><span class="dot"></span> Gallery</div>
+      <h2>From the run sheet to the room</h2>
+      <p>Snapshots from celebrations, wellness pushes and community days — the actual rooms I've run.</p>
+    </div>
+    <div class="gallery-grid">
+
+      <div class="gallery-item">
+        <div class="gallery-visual"><img src="assets/img/hosting-event.jpg" alt="Hosting the All India Meet"></div>
+        <div class="gallery-content">
+          <h4>Hosting the All India Meet</h4>
+          <p>On stage at Clarks Exotica, Bengaluru — emceeing the flagship 150+ employee gathering.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <div class="gallery-visual"><img src="assets/img/womens-day.jpg" alt="Women's Day celebration"></div>
+        <div class="gallery-content">
+          <h4>Women's Day Celebration</h4>
+          <p>Leadership-led appreciation moments recognizing women across the org.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <div class="gallery-visual"><img src="assets/img/pride-parade.jpg" alt="Pride Parade participation"></div>
+        <div class="gallery-content">
+          <h4>Pride Parade &amp; DEI</h4>
+          <p>On the ground with the Proud committee, flag raised high.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <div class="gallery-visual"><img src="assets/img/pride-float.jpg" alt="Jaipur Queer Gulabi Pride float"></div>
+        <div class="gallery-content">
+          <h4>Jaipur Queer Gulabi Pride</h4>
+          <p>Stage &amp; float production for the city's Pride celebration.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <div class="gallery-visual"><img src="assets/img/christmas-office.jpg" alt="Christmas celebration at the office"></div>
+        <div class="gallery-content">
+          <h4>Christmas at the Office</h4>
+          <p>Santa hats, cake, and the whole team showing up for the holidays.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <div class="gallery-visual"><img src="assets/img/christmas-decor.jpg" alt="Christmas decorations and team photo"></div>
+        <div class="gallery-content">
+          <h4>Festive Parties &amp; Décor</h4>
+          <p>End-of-year celebrations, styled and decorated from scratch.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <div class="gallery-visual"><img src="assets/img/diwali-decor.jpg" alt="Diwali office decorations"></div>
+        <div class="gallery-content">
+          <h4>Diwali &amp; Festive Decor</h4>
+          <p>Turning the office into a celebration, one hand-strung garland at a time.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <div class="gallery-visual"><img src="assets/img/donation-drive.jpg" alt="Donation drive community day"></div>
+        <div class="gallery-content">
+          <h4>Donation Drive — Community Day</h4>
+          <p>A full-team visit and giving day with the local community we support.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <div class="gallery-visual"><img src="assets/img/leadership-visit.jpg" alt="Leadership visit and giving back"></div>
+        <div class="gallery-content">
+          <h4>Leadership Visit &amp; Giving Back</h4>
+          <p>Coordinating leadership townhalls and community give-back moments.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <div class="gallery-visual"><img src="assets/img/animal-welfare.jpg" alt="Animal welfare shelter visit"></div>
+        <div class="gallery-content">
+          <h4>Animal Welfare — Shelter Visit</h4>
+          <p>Team volunteering day with HIS-India, supporting animals in need.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <div class="gallery-visual"><img src="assets/img/animal-rescue.jpg" alt="Up close with rescued animals"></div>
+        <div class="gallery-content">
+          <h4>Animal Welfare — Up Close</h4>
+          <p>Hands-on moments that make community service personal.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <div class="gallery-visual"><img src="assets/img/trekking.jpg" alt="Team trekking and green drive"></div>
+        <div class="gallery-content">
+          <h4>Trekking &amp; Green Initiatives</h4>
+          <p>Outdoor team building on the trail, rain or shine.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <div class="gallery-visual"><img src="assets/img/trekking-team.jpg" alt="Outdoor team day"></div>
+        <div class="gallery-content">
+          <h4>Outdoor Team Day</h4>
+          <p>Trekking, pickleball, and everything in between.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <div class="gallery-visual"><img src="assets/img/trail-team.jpg" alt="On the trail with the team"></div>
+        <div class="gallery-content">
+          <h4>On the Trail</h4>
+          <p>Another eco-drive, another team of trekkers up for it.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <div class="gallery-visual"><img src="assets/img/people-culture-day.jpg" alt="People and Culture day event"></div>
+        <div class="gallery-content">
+          <h4>People &amp; Culture Day</h4>
+          <p>Hosting the room for a full-day culture &amp; connection session.</p>
+        </div>
+      </div>
 
     </div>
+  </section>
 
-    <footer>
-        <p>© 2026 Shubhangi Vijay | Employee Experience Specialist Portfolio</p>
-    </footer>
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="contact-card">
+      <div class="eyebrow" style="justify-content:center;"><span class="dot"></span> Contact</div>
+      <h2>Ready to bring the wow factor in-house.</h2>
+      <p>If your team needs someone to plan, run and personally show up for employee experience — from ideation to outstanding execution — let's talk.</p>
+      <div class="contact-links">
+        <a href="mailto:shubhangivj19@gmail.com" id="emailBtn">✉ shubhangivj19@gmail.com</a>
+        <a href="tel:+918209587502">📞 +91 82095 87502</a>
+        <a href="https://linkedin.com/in/shubhangivijay-584530217" target="_blank" rel="noopener">in/shubhangivijay</a>
+        <a href="#" style="pointer-events:none; opacity:.7;">📍 Pune, Maharashtra, India</a>
+      </div>
+    </div>
+  </section>
 
-    <!-- Robust Confetti Trigger Script -->
-    <script>
-        document.querySelectorAll('.nav-link').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                // Trigger celebratory confetti burst immediately
-                confetti({
-                    particleCount: 100,
-                    spread: 80,
-                    origin: { y: 0.3 },
-                    colors: ['#1d3557', '#7209b7', '#2b9348', '#f77f00']
-                });
-            });
-        });
-    </script>
+</div>
+
+<footer>© 2026 Shubhangi Vijay · Employee Experience &amp; Event Coordination Portfolio</footer>
+
+<script>
+  // scroll progress
+  window.addEventListener('scroll', () => {
+    const h = document.documentElement;
+    const pct = (h.scrollTop) / (h.scrollHeight - h.clientHeight) * 100;
+    document.getElementById('progress').style.width = pct + '%';
+  });
+
+  // scroll-spy nav
+  const links = document.querySelectorAll('.navlink');
+  const sections = [...links].map(l => document.querySelector(l.getAttribute('href')));
+  const spy = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = '#' + entry.target.id;
+        links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === id));
+      }
+    });
+  }, { rootMargin: '-45% 0px -50% 0px' });
+  sections.forEach(s => s && spy.observe(s));
+
+  // confetti — the literal "razzle dazzle and wow factor" from the JD
+  function burst(x, y) {
+    confetti({
+      particleCount: 90,
+      spread: 75,
+      origin: { x: x ?? 0.5, y: y ?? 0.4 },
+      colors: ['#ff6b4a', '#ffc94a', '#2fd3c4', '#f5f3ee']
+    });
+  }
+  document.getElementById('photoTrigger').addEventListener('click', () => burst(0.78, 0.25));
+  document.getElementById('emailBtn').addEventListener('click', () => burst(0.5, 0.9));
+</script>
+
 </body>
 </html>
