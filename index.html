@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shubhangi Vijay | Employee Experience Portfolio</title>
+    <title>Shubhangi Vijay | Employee Experience Specialist Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- Canvas Confetti Library for Pop-up Animation -->
+    <!-- Canvas Confetti Library -->
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <style>
         :root {
-            --bg-color: #f3f0fa; /* Light Lavender Background */
+            --bg-color: #f3f0fa;
             --card-bg: #ffffff;
-            --text-main: #0c1b33;  /* Navy Blue Font */
+            --text-main: #0c1b33;
             --text-muted: #334e68;
             --accent-blue: #1d3557;
             --accent-green: #2b9348;
@@ -25,7 +25,7 @@
         nav {
             position: fixed;
             top: 0; left: 0; width: 100%;
-            background: rgba(243, 240, 250, 0.92);
+            background: rgba(243, 240, 250, 0.95);
             backdrop-filter: blur(10px);
             display: flex;
             justify-content: space-between;
@@ -36,7 +36,7 @@
         }
         .nav-logo { font-weight: 800; font-size: 1.2rem; color: var(--accent-blue); letter-spacing: 0.5px; }
         .nav-links { display: flex; list-style: none; gap: 20px; }
-        .nav-links a { color: var(--text-muted); text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: color 0.3s; }
+        .nav-links a { color: var(--text-muted); text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: color 0.3s; cursor: pointer; }
         .nav-links a:hover { color: var(--accent-blue); }
 
         /* Hero Section with Light Lavender BG & Party Splash Abstract */
@@ -47,33 +47,34 @@
             overflow: hidden;
             background: var(--bg-color);
         }
-        /* Party splash abstract shapes background */
         header::before {
             content: '';
             position: absolute;
             top: 0; left: 0; width: 100%; height: 100%;
             background-image: 
-                radial-gradient(circle 120px at 15% 25%, rgba(29, 53, 87, 0.08) 0%, transparent 100%),
-                radial-gradient(circle 150px at 85% 20%, rgba(114, 9, 183, 0.08) 0%, transparent 100%),
-                radial-gradient(circle 130px at 80% 80%, rgba(43, 147, 72, 0.08) 0%, transparent 100%),
-                radial-gradient(circle 140px at 20% 75%, rgba(247, 127, 0, 0.08) 0%, transparent 100%);
+                radial-gradient(circle 140px at 15% 25%, rgba(29, 53, 87, 0.1) 0%, transparent 100%),
+                radial-gradient(circle 180px at 85% 20%, rgba(114, 9, 183, 0.1) 0%, transparent 100%),
+                radial-gradient(circle 150px at 80% 80%, rgba(43, 147, 72, 0.1) 0%, transparent 100%),
+                radial-gradient(circle 160px at 20% 75%, rgba(247, 127, 0, 0.1) 0%, transparent 100%);
             z-index: 1;
             pointer-events: none;
         }
         .hero-container { position: relative; z-index: 2; max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 20px; }
+        
+        /* Larger Personal Photo Frame */
         .profile-pic-container {
-            width: 150px; height: 150px;
+            width: 220px; height: 220px;
             border-radius: 50%;
-            padding: 4px;
-            background: linear-gradient(135deg, #1d3557, #7209b7);
+            padding: 5px;
+            background: linear-gradient(135deg, #1d3557, #7209b7, #2b9348);
             display: flex; align-items: center; justify-content: center;
-            box-shadow: 0 10px 25px rgba(12, 27, 51, 0.15);
+            box-shadow: 0 15px 35px rgba(12, 27, 51, 0.2);
         }
         .profile-pic {
             width: 100%; height: 100%;
             border-radius: 50%;
             object-fit: cover;
-            background: #e2e8f0;
+            background: #ffffff;
         }
         .hero-badge {
             padding: 6px 18px;
@@ -101,7 +102,7 @@
         .card ul { padding-left: 20px; margin-top: 10px; color: var(--text-muted); font-size: 0.92rem; }
         .card li { margin-bottom: 6px; }
 
-        /* Gallery Grid with Real Attached Images */
+        /* Gallery Grid */
         .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
         .gallery-item { background: var(--card-bg); border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color); box-shadow: 0 4px 12px rgba(12, 27, 51, 0.03); }
         .gallery-image { height: 180px; width: 100%; object-fit: cover; background: #e2e8f0; border-bottom: 1px solid var(--border-color); }
@@ -132,16 +133,16 @@
         </ul>
     </nav>
 
-    <!-- Hero Section / Personal Photo Slot with Light Lavender & Party Splash BG -->
+    <!-- Hero Section with Larger Personal Photo & Party Splash BG -->
     <header id="about">
         <div class="hero-container">
             <div class="profile-pic-container">
-                <!-- Attached Personal Photo Added -->
+                <!-- Attached Personal Photo Added (Large Display) -->
                 <img src="ChatGPT Image Jul 23, 2026, 07_06_01 PM.png" alt="Shubhangi Vijay" class="profile-pic" onerror="this.style.display='none'">
             </div>
             <div class="hero-badge">Employee Experience & People Operations Specialist</div>
             <h1>Shubhangi Vijay</h1>
-            <p class="subtitle">Strengthening sense of belonging, driving world-class employee wellbeing, and orchestrating high-impact corporate events with passion and precision[cite: 1, 2].</p>
+            <p class="subtitle">Strengthening sense of belonging, driving world-class employee wellbeing, and orchestrating high-impact corporate events with passion and precision.</p>
         </div>
     </header>
 
@@ -151,7 +152,7 @@
         <section>
             <h2>About Me</h2>
             <div class="card">
-                <p>Results-driven HR Operations and Employee Experience professional with 10+ years of progressive experience managing end-to-end employee lifecycles, global stakeholder communications, engagement, and large-scale corporate events[cite: 1, 2]. Adept at adding the "razzle dazzle" and wow factor to workplace culture while ensuring meticulous operational execution[cite: 1, 2].</p>
+                <p>Results-driven HR Operations and Employee Experience professional with 10+ years of progressive experience managing end-to-end employee lifecycles, global stakeholder communications, engagement, and large-scale corporate events. Adept at adding the razzle dazzle and wow factor to workplace culture while ensuring meticulous operational execution.</p>
             </div>
         </section>
 
@@ -160,12 +161,12 @@
             <h2>Regional Expertise</h2>
             <div class="grid-2">
                 <div class="card">
-                    <h3>🌏 APAC Markets</h3>
-                    <p>Skilled in managing cross-border employment operations, documentation, and employee lifecycle logistics across India, Philippines, Singapore, Malaysia, Indonesia, and Australia[cite: 1].</p>
+                    <h3>APAC Markets</h3>
+                    <p>Skilled in managing cross-border employment operations, documentation, and employee lifecycle logistics across India, Philippines, Singapore, Malaysia, Indonesia, and Australia.</p>
                 </div>
                 <div class="card">
-                    <h3>🏢 Local Workplace Engagement</h3>
-                    <p>Designing hybrid office culture initiatives, on-site experiences, and region-specific welfare activities that build high engagement and collaboration[cite: 1, 2].</p>
+                    <h3>Local Workplace Engagement</h3>
+                    <p>Designing hybrid office culture initiatives, on-site experiences, and region-specific welfare activities that build high engagement and collaboration.</p>
                 </div>
             </div>
         </section>
@@ -176,21 +177,21 @@
             <div class="grid-2">
                 <div class="card">
                     <h3>Senior Associate - People & HR Operations</h3>
-                    <p style="color: var(--accent-green); font-size: 0.9rem; margin-bottom: 10px;">Spaulding Ridge | Nov 2021 – Present[cite: 1]</p>
+                    <p style="color: var(--accent-green); font-size: 0.9rem; margin-bottom: 10px;">Spaulding Ridge | Nov 2021 – Present</p>
                     <ul>
-                        <li>Led end-to-end employee engagement, wellbeing programs, and large-scale event production, increasing participation by 25%[cite: 1].</li>
-                        <li>Managed onboarding and pre-boarding logistics for 80+ annual APAC hires, guaranteeing day-one readiness[cite: 1].</li>
-                        <li>Conducted 100+ employee check-ins annually to identify retention risks and channel feedback to leadership[cite: 1].</li>
-                        <li>Coordinated learning and development initiatives, internship cohorts, and Consulting for Success series for APAC employees[cite: 1].</li>
+                        <li>Led end-to-end employee engagement, wellbeing programs, and large-scale event production, increasing participation by 25%.</li>
+                        <li>Managed onboarding and pre-boarding logistics for 80+ annual APAC hires, guaranteeing day-one readiness.</li>
+                        <li>Conducted 100+ employee check-ins annually to identify retention risks and channel feedback to leadership.</li>
+                        <li>Coordinated learning and development initiatives, internship cohorts, and Consulting for Success series for APAC employees.</li>
                     </ul>
                 </div>
                 <div class="card">
                     <h3>HR Manager</h3>
-                    <p style="color: var(--accent-green); font-size: 0.9rem; margin-bottom: 10px;">Samaksh Enterprises | Jul 2015 – Aug 2021[cite: 1]</p>
+                    <p style="color: var(--accent-green); font-size: 0.9rem; margin-bottom: 10px;">Samaksh Enterprises | Jul 2015 – Aug 2021</p>
                     <ul>
-                        <li>Independently managed the full employee lifecycle, attendance, compliance, and employee relations for 40+ staff[cite: 1].</li>
-                        <li>Handled event logistics, on-ground operations, accommodation, and stipend coordination for 100+ interns across events[cite: 1].</li>
-                        <li>Managed stakeholder communication, vendor coordination, and operational delivery for 25+ client accounts[cite: 1].</li>
+                        <li>Independently managed the full employee lifecycle, attendance, compliance, and employee relations for 40+ staff.</li>
+                        <li>Handled event logistics, on-ground operations, accommodation, and stipend coordination for 100+ interns across events.</li>
+                        <li>Managed stakeholder communication, vendor coordination, and operational delivery for 25+ client accounts.</li>
                     </ul>
                 </div>
             </div>
@@ -200,19 +201,19 @@
         <section id="projects">
             <h2>Flagship Projects</h2>
             <div class="card" style="border: 2px solid var(--accent-blue);">
-                <h3>🌟 All India Meet (2 Consecutive Years - 150+ Employees)[cite: 1]</h3>
-                <p>Spearheaded comprehensive end-to-end operations and execution for large-scale multi-day national employee meets[cite: 1].</p>
+                <h3>All India Meet (2 Consecutive Years - 150+ Employees)</h3>
+                <p>Spearheaded comprehensive end-to-end operations and execution for large-scale multi-day national employee meets.</p>
                 <div class="tags">
-                    <span class="tag">Travel Booking & Logistics (80+ Employees)[cite: 1]</span>
-                    <span class="tag">Venue Finalization[cite: 1]</span>
-                    <span class="tag">Budget Approvals[cite: 1]</span>
-                    <span class="tag">Menu Engineering & Curation[cite: 1]</span>
-                    <span class="tag">On-Ground Production[cite: 1]</span>
-                    <span class="tag">Marketing Campaigns[cite: 1]</span>
-                    <span class="tag">Photography Management[cite: 1]</span>
-                    <span class="tag">Itinerary Coordination[cite: 1]</span>
-                    <span class="tag">Employee Communications[cite: 1]</span>
-                    <span class="tag">Custom Swag Finalization[cite: 1]</span>
+                    <span class="tag">Travel Booking & Logistics (80+ Employees)</span>
+                    <span class="tag">Venue Finalization</span>
+                    <span class="tag">Budget Approvals</span>
+                    <span class="tag">Menu Engineering & Curation</span>
+                    <span class="tag">On-Ground Production</span>
+                    <span class="tag">Marketing Campaigns</span>
+                    <span class="tag">Photography Management</span>
+                    <span class="tag">Itinerary Coordination</span>
+                    <span class="tag">Employee Communications</span>
+                    <span class="tag">Custom Swag Finalization</span>
                 </div>
             </div>
         </section>
@@ -222,29 +223,29 @@
             <h2>DEI, Community Service & Green Initiatives</h2>
             <div class="grid-3">
                 <div class="card">
-                    <h3>🏳️‍🌈 Diversity, Equity & Inclusion</h3>
+                    <h3>Diversity, Equity & Inclusion</h3>
                     <ul>
-                        <li>Pride Parade coordination & active member of the Proud committee[cite: 1].</li>
-                        <li>Representing Indian culture on global corporate calls[cite: 1].</li>
-                        <li>Mental wellness initiatives & Yoga Day celebrations[cite: 1].</li>
-                        <li>Women's Day APAC empowerment programs[cite: 1].</li>
+                        <li>Pride Parade coordination & active member of the Proud committee.</li>
+                        <li>Representing Indian culture on global corporate calls.</li>
+                        <li>Mental wellness initiatives & Yoga Day celebrations.</li>
+                        <li>Women's Day APAC empowerment programs.</li>
                     </ul>
                 </div>
                 <div class="card">
-                    <h3>🌱 Green & Eco Initiatives</h3>
+                    <h3>Green & Eco Initiatives</h3>
                     <ul>
-                        <li>Plantation drives & trekking events[cite: 1].</li>
-                        <li>Paper bag making workshops[cite: 1].</li>
-                        <li>Seedball making sessions[cite: 1].</li>
-                        <li>Bird feeder decoration activities[cite: 1].</li>
+                        <li>Plantation drives & trekking events.</li>
+                        <li>Paper bag making workshops.</li>
+                        <li>Seedball making sessions.</li>
+                        <li>Bird feeder decoration activities.</li>
                     </ul>
                 </div>
                 <div class="card">
-                    <h3>🤝 Community Service</h3>
+                    <h3>Community Service</h3>
                     <ul>
-                        <li>Donation in kind drives[cite: 1].</li>
-                        <li>Fundraisers for social welfare[cite: 1].</li>
-                        <li>Blood donation camps[cite: 1].</li>
+                        <li>Donation in kind drives.</li>
+                        <li>Fundraisers for social welfare.</li>
+                        <li>Blood donation camps.</li>
                     </ul>
                 </div>
             </div>
@@ -255,27 +256,27 @@
             <h2>Corporate Culture & Wellness Initiatives</h2>
             <div class="grid-3">
                 <div class="card">
-                    <h3>🎉 Celebrations & Festivities</h3>
+                    <h3>Celebrations & Festivities</h3>
                     <ul>
-                        <li>Diwali & Holi parties (2025 & 2026)[cite: 1].</li>
-                        <li>Christmas celebrations & gifting[cite: 1].</li>
-                        <li>Republic Day & People & Culture Days[cite: 1].</li>
+                        <li>Diwali & Holi parties (2025 & 2026).</li>
+                        <li>Christmas celebrations & gifting.</li>
+                        <li>Republic Day & People & Culture Days.</li>
                     </ul>
                 </div>
                 <div class="card">
-                    <h3>🤝 Engagement & Connection</h3>
+                    <h3>Engagement & Connection</h3>
                     <ul>
-                        <li>Friday Happy Hours: Games & All-India virtual calls[cite: 1].</li>
-                        <li>Mental Wellness Bingo challenges[cite: 1].</li>
-                        <li>P&C day cultural event hosting & coordination[cite: 1].</li>
+                        <li>Friday Happy Hours: Games & All-India virtual calls.</li>
+                        <li>Mental Wellness Bingo challenges.</li>
+                        <li>P&C day cultural event hosting & coordination.</li>
                     </ul>
                 </div>
                 <div class="card">
-                    <h3>⚙️ Operations & Leadership</h3>
+                    <h3>Operations & Leadership</h3>
                     <ul>
-                        <li>Leadership visits: Lunches, dinners & townhalls[cite: 1].</li>
-                        <li>Daily lunch facilitation & vendor management[cite: 1].</li>
-                        <li>Annual swag design & finalization[cite: 1].</li>
+                        <li>Leadership visits: Lunches, dinners & townhalls.</li>
+                        <li>Daily lunch facilitation & vendor management.</li>
+                        <li>Annual swag design & finalization.</li>
                     </ul>
                 </div>
             </div>
@@ -291,42 +292,42 @@
                     <img src="Hosting corporate event at SR.jpg" alt="Corporate Event Hosting" class="gallery-image">
                     <div class="gallery-content">
                         <h4>Corporate Event Hosting</h4>
-                        <p>Leading large-scale engagements and All India Meets with high energy[cite: 1].</p>
+                        <p>Leading large-scale engagements and All India Meets with high energy.</p>
                     </div>
                 </div>
                 <div class="gallery-item">
                     <img src="Womens' day celebration.jpg" alt="Women's Day Celebration" class="gallery-image">
                     <div class="gallery-content">
                         <h4>Women's Day Celebration</h4>
-                        <p>Empowerment programs and regional appreciation sessions across APAC[cite: 1].</p>
+                        <p>Empowerment programs and regional appreciation sessions across APAC.</p>
                     </div>
                 </div>
                 <div class="gallery-item">
                     <img src="Pride Parade.jpg" alt="Pride Parade & DEI" class="gallery-image">
                     <div class="gallery-content">
                         <h4>Pride Parade & DEI</h4>
-                        <p>Active participation in Pride committee initiatives and cultural inclusion[cite: 1].</p>
+                        <p>Active participation in Pride committee initiatives and cultural inclusion.</p>
                     </div>
                 </div>
                 <div class="gallery-item">
                     <img src="Christmas celebration.jpg" alt="Christmas Celebration" class="gallery-image">
                     <div class="gallery-content">
                         <h4>Festive Parties & Christmas</h4>
-                        <p>End-of-year celebrations, festive decor, and team gifting[cite: 1].</p>
+                        <p>End-of-year celebrations, festive decor, and team gifting.</p>
                     </div>
                 </div>
                 <div class="gallery-item">
                     <img src="Animal Welfare event.jpg" alt="Animal Welfare & Community" class="gallery-image">
                     <div class="gallery-content">
                         <h4>Animal Welfare & Community</h4>
-                        <p>Community outreach, donation drives, and animal welfare support[cite: 1].</p>
+                        <p>Community outreach, donation drives, and animal welfare support.</p>
                     </div>
                 </div>
                 <div class="gallery-item">
                     <img src="Trekking.jpg" alt="Trekking & Outdoor Drive" class="gallery-image">
                     <div class="gallery-content">
                         <h4>Trekking & Green Initiatives</h4>
-                        <p>Outdoor team building, trekking excursions, and eco-drives[cite: 1].</p>
+                        <p>Outdoor team building, trekking excursions, and eco-drives.</p>
                     </div>
                 </div>
             </div>
@@ -337,9 +338,9 @@
             <h2>Get in Touch</h2>
             <div class="card" style="text-align: center;">
                 <p style="margin-bottom: 15px; color: var(--text-muted);">Ready to bring high energy and exceptional employee experiences to your organization?</p>
-                <p><strong>Email:</strong> shubhangivj19@gmail.com[cite: 1]</p>
-                <p><strong>LinkedIn:</strong> linkedin.com/in/shubhangivijay-584530217[cite: 1]</p>
-                <p><strong>Location:</strong> Pune, Maharashtra, India[cite: 1]</p>
+                <p><strong>Email:</strong> shubhangivj19@gmail.com</p>
+                <p><strong>LinkedIn:</strong> linkedin.com/in/shubhangivijay-584530217</p>
+                <p><strong>Location:</strong> Pune, Maharashtra, India</p>
             </div>
         </section>
 
@@ -349,15 +350,15 @@
         <p>© 2026 Shubhangi Vijay | Employee Experience Specialist Portfolio</p>
     </footer>
 
-    <!-- Confetti Script Triggered on Navigation Click / Page Shift -->
+    <!-- Robust Confetti Trigger Script -->
     <script>
         document.querySelectorAll('.nav-link').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
-                // Trigger celebratory confetti pop-up
+                // Trigger celebratory confetti burst immediately
                 confetti({
-                    particleCount: 80,
-                    spread: 70,
-                    origin: { y: 0.2 },
+                    particleCount: 100,
+                    spread: 80,
+                    origin: { y: 0.3 },
                     colors: ['#1d3557', '#7209b7', '#2b9348', '#f77f00']
                 });
             });
