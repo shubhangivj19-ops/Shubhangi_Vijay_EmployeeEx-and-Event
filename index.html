@@ -8,14 +8,15 @@
     <style>
         :root {
             --gradient: linear-gradient(135deg, #FF6B6B 0%, #FFD93D 25%, #6BCB77 50%, #4D96FF 75%, #9966FF 100%);
-            --bg-color: #0b0f19;
-            --card-bg: #131c31;
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
-            --accent-blue: #4D96FF;
-            --accent-green: #6BCB77;
-            --accent-yellow: #FFD93D;
-            --accent-pink: #FF6B6B;
+            --bg-color: #ffffff;
+            --card-bg: #f8fafc;
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --accent-blue: #2563eb;
+            --accent-green: #16a34a;
+            --accent-yellow: #ca8a04;
+            --accent-pink: #dc2626;
+            --border-color: #e2e8f0;
         }
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
         body { background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; }
@@ -24,40 +25,56 @@
         nav {
             position: fixed;
             top: 0; left: 0; width: 100%;
-            background: rgba(19, 28, 49, 0.85);
+            background: rgba(255, 255, 255, 0.9);
             backdrop-filter: blur(10px);
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 18px 40px;
             z-index: 1000;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
+            border-bottom: 1px solid var(--border-color);
         }
         .nav-logo { font-weight: 800; font-size: 1.2rem; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .nav-links { display: flex; list-style: none; gap: 20px; }
         .nav-links a { color: var(--text-muted); text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: color 0.3s; }
         .nav-links a:hover { color: var(--accent-blue); }
 
-        /* Hero Section with Photo */
+        /* Hero Section with White Background & Party Abstract Effect */
         header {
-            padding: 140px 20px 80px;
+            padding: 150px 20px 80px;
             text-align: center;
-            background: radial-gradient(circle at top, rgba(77, 150, 255, 0.12) 0%, transparent 60%);
+            position: relative;
+            overflow: hidden;
+            background: #ffffff;
         }
-        .hero-container { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 20px; }
+        /* Party abstract festive background shapes */
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: 
+                radial-gradient(circle 80px at 10% 20%, rgba(255, 107, 107, 0.12) 0%, transparent 100%),
+                radial-gradient(circle 100px at 90% 15%, rgba(77, 150, 255, 0.12) 0%, transparent 100%),
+                radial-gradient(circle 90px at 85% 85%, rgba(107, 203, 119, 0.12) 0%, transparent 100%),
+                radial-gradient(circle 110px at 15% 80%, rgba(255, 217, 61, 0.15) 0%, transparent 100%),
+                radial-gradient(circle 70px at 50% 50%, rgba(153, 102, 255, 0.1) 0%, transparent 100%);
+            z-index: 1;
+            pointer-events: none;
+        }
+        .hero-container { position: relative; z-index: 2; max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 20px; }
         .profile-pic-container {
             width: 140px; height: 140px;
             border-radius: 50%;
             padding: 4px;
             background: var(--gradient);
             display: flex; align-items: center; justify-content: center;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
         }
         .profile-pic {
             width: 100%; height: 100%;
             border-radius: 50%;
             object-fit: cover;
-            background: #1e293b; /* Placeholder color if image link isn't loaded yet */
+            background: #e2e8f0;
         }
         .hero-badge {
             padding: 6px 16px;
@@ -76,26 +93,28 @@
         section { padding-top: 40px; margin-bottom: 40px; }
         h2 { font-size: 2rem; margin-bottom: 25px; font-weight: 700; border-left: 5px solid var(--accent-blue); padding-left: 15px; }
 
-        /* Grid Layouts */
+        /* Grid Layouts & Cards */
         .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; }
         .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-        .card { background: var(--card-bg); border-radius: 16px; padding: 25px; border: 1px solid rgba(255,255,255,0.05); transition: transform 0.3s ease; }
-        .card:hover { transform: translateY(-5px); border-color: rgba(77, 150, 255, 0.4); }
-        .card h3 { font-size: 1.2rem; margin-bottom: 10px; color: var(--accent-yellow); }
+        .card { background: var(--card-bg); border-radius: 16px; padding: 25px; border: 1px solid var(--border-color); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.05); border-color: var(--accent-blue); }
+        .card h3 { font-size: 1.2rem; margin-bottom: 10px; color: var(--accent-blue); }
+        .card ul { padding-left: 20px; margin-top: 10px; color: var(--text-muted); font-size: 0.92rem; }
+        .card li { margin-bottom: 6px; }
 
         /* Gallery Grid */
         .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
-        .gallery-item { background: var(--card-bg); border-radius: 12px; overflow: hidden; border: 1px solid rgba(255,255,255,0.05); }
-        .image-placeholder { height: 160px; background: linear-gradient(45deg, #131c31, #1e293b); display: flex; align-items: center; justify-content: center; color: var(--text-muted); font-size: 0.85rem; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .gallery-item { background: var(--card-bg); border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color); }
+        .image-placeholder { height: 160px; background: #e2e8f0; display: flex; align-items: center; justify-content: center; color: var(--text-muted); font-size: 0.85rem; border-bottom: 1px solid var(--border-color); }
         .gallery-content { padding: 20px; }
         .gallery-content h4 { font-size: 1.1rem; margin-bottom: 8px; color: var(--accent-blue); }
         .gallery-content p { font-size: 0.9rem; color: var(--text-muted); }
 
         /* Tags */
         .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 15px; }
-        .tag { background: rgba(255,255,255,0.07); padding: 5px 12px; border-radius: 6px; font-size: 0.8rem; color: #f1f5f9; }
+        .tag { background: #e2e8f0; padding: 5px 12px; border-radius: 6px; font-size: 0.8rem; color: var(--text-main); font-weight: 500; }
 
-        footer { text-align: center; padding: 40px; color: var(--text-muted); font-size: 0.9rem; border-top: 1px solid rgba(255,255,255,0.05); margin-top: 40px; }
+        footer { text-align: center; padding: 40px; color: var(--text-muted); font-size: 0.9rem; border-top: 1px solid var(--border-color); margin-top: 40px; }
     </style>
 </head>
 <body>
@@ -108,13 +127,13 @@
             <li><a href="#region">Region</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
-            <li><a href="#dei">DEI</a></li>
+            <li><a href="#dei">DEI & Green</a></li>
             <li><a href="#gallery">Gallery</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
-    <!-- Hero Section / Personal Photo Slot -->
+    <!-- Hero Section / Personal Photo Slot with Festive Background -->
     <header>
         <div class="hero-container">
             <div class="profile-pic-container">
@@ -123,7 +142,7 @@
             </div>
             <div class="hero-badge">Employee Experience & People Operations Specialist</div>
             <h1>Shubhangi Vijay</h1>
-            <p class="subtitle">Strengthening sense of belonging, driving world-class employee wellbeing, and orchestrating large-scale corporate events with high energy and precision[cite: 1, 2].</p>
+            <p class="subtitle">Strengthening sense of belonging, driving world-class employee wellbeing, and orchestrating high-impact corporate events with passion and precision[cite: 1, 2].</p>
         </div>
     </header>
 
@@ -133,7 +152,7 @@
         <section id="about">
             <h2>About Me</h2>
             <div class="card">
-                <p>Results-driven HR Operations and Employee Experience professional with extensive experience managing end-to-end employee lifecycles, global stakeholder communications, and impactful organizational events[cite: 1, 2]. Passionate about adding the "razzle dazzle" and wow factor to workplace culture, employee engagement, and community building[cite: 1, 2].</p>
+                <p>Results-driven HR Operations and Employee Experience professional with 10+ years of progressive experience managing end-to-end employee lifecycles, global stakeholder communications, engagement, and large-scale corporate events[cite: 1, 2]. Adept at adding the "razzle dazzle" and wow factor to workplace culture while ensuring meticulous operational execution[cite: 1, 2].</p>
             </div>
         </section>
 
@@ -142,29 +161,38 @@
             <h2>Regional Expertise</h2>
             <div class="grid-2">
                 <div class="card">
-                    <h3>🌏 APAC Operations</h3>
-                    <p>Skilled in navigating cross-border employment operations and employee lifecycle logistics across India, Philippines, Singapore, and regional markets[cite: 1].</p>
+                    <h3>🌏 APAC Markets</h3>
+                    <p>Skilled in managing cross-border employment operations, documentation, and employee lifecycle logistics across India, Philippines, Singapore, Malaysia, Indonesia, and Australia[cite: 1].</p>
                 </div>
                 <div class="card">
                     <h3>🏢 Local Workplace Engagement</h3>
-                    <p>Designing region-specific engagement plans, hybrid office culture initiatives, and on-site experiences that boost collaboration and pride[cite: 1, 2].</p>
+                    <p>Designing hybrid office culture initiatives, on-site experiences, and region-specific welfare activities that build high engagement and collaboration[cite: 1, 2].</p>
                 </div>
             </div>
         </section>
 
-        <!-- 3. EXPERIENCE SECTION -->
+        <!-- 3. EXPERIENCE SECTION (Aligned with JD & Resume) -->
         <section id="experience">
             <h2>Professional Experience</h2>
             <div class="grid-2">
                 <div class="card">
                     <h3>Senior Associate - People & HR Operations</h3>
                     <p style="color: var(--accent-green); font-size: 0.9rem; margin-bottom: 10px;">Spaulding Ridge | Nov 2021 – Present[cite: 1]</p>
-                    <p>Managing end-to-end onboarding, HRIS governance, employee check-ins, and leading large-scale engagement and learning initiatives[cite: 1].</p>
+                    <ul>
+                        <li>Led end-to-end employee engagement, wellbeing programs, and large-scale event production, increasing participation by 25%[cite: 1].</li>
+                        <li>Managed onboarding and pre-boarding logistics for 80+ annual APAC hires, guaranteeing day-one readiness[cite: 1].</li>
+                        <li>Conducted 100+ employee check-ins annually to identify retention risks and channel feedback to leadership[cite: 1].</li>
+                        <li>Coordinated learning and development initiatives, internship cohorts, and Consulting for Success series for APAC employees[cite: 1].</li>
+                    </ul>
                 </div>
                 <div class="card">
                     <h3>HR Manager</h3>
                     <p style="color: var(--accent-green); font-size: 0.9rem; margin-bottom: 10px;">Samaksh Enterprises | Jul 2015 – Aug 2021[cite: 1]</p>
-                    <p>Independently managed the full employee lifecycle, event logistics, multi-client vendor coordination, and operations[cite: 1].</p>
+                    <ul>
+                        <li>Independently managed the full employee lifecycle, attendance, compliance, and employee relations for 40+ staff[cite: 1].</li>
+                        <li>Handled event logistics, on-ground operations, accommodation, and stipend coordination for 100+ interns across events[cite: 1].</li>
+                        <li>Managed stakeholder communication, vendor coordination, and operational delivery for 25+ client accounts[cite: 1].</li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -174,31 +202,82 @@
             <h2>Flagship Projects</h2>
             <div class="card" style="border: 2px solid var(--accent-green);">
                 <h3>🌟 All India Meet (2 Consecutive Years - 150+ Employees)[cite: 1]</h3>
-                <p>Spearheaded end-to-end operations including full travel booking and logistics for 80+ team members, venue finalization, budget approvals, menu curation, custom swag finalization, marketing campaigns, and photography production[cite: 1].</p>
+                <p>Spearheaded comprehensive end-to-end operations and execution for large-scale multi-day national employee meets[cite: 1].</p>
                 <div class="tags">
-                    <span class="tag">Travel & Logistics</span>
-                    <span class="tag">Venue Sourcing</span>
-                    <span class="tag">Budget Management</span>
-                    <span class="tag">Employee Comms</span>
+                    <span class="tag">Travel Booking & Logistics (80+ Employees)[cite: 1]</span>
+                    <span class="tag">Venue Finalization[cite: 1]</span>
+                    <span class="tag">Budget Approvals[cite: 1]</span>
+                    <span class="tag">Menu Engineering & Curation[cite: 1]</span>
+                    <span class="tag">On-Ground Production[cite: 1]</span>
+                    <span class="tag">Marketing Campaigns[cite: 1]</span>
+                    <span class="tag">Photography Management[cite: 1]</span>
+                    <span class="tag">Itinerary Coordination[cite: 1]</span>
+                    <span class="tag">Employee Communications[cite: 1]</span>
+                    <span class="tag">Custom Swag Finalization[cite: 1]</span>
                 </div>
             </div>
         </section>
 
-        <!-- 5. DEI SECTION -->
+        <!-- 5. DEI & GREEN SECTION -->
         <section id="dei">
-            <h2>Diversity, Equity & Inclusion (DEI)</h2>
+            <h2>DEI, Community Service & Green Initiatives</h2>
             <div class="grid-3">
                 <div class="card">
-                    <h3>Women's Day (APAC)</h3>
-                    <p>Executing regional inclusion celebrations, keynotes, and empowerment programs[cite: 1].</p>
+                    <h3>🏳️‍🌈 Diversity, Equity & Inclusion</h3>
+                    <ul>
+                        <li>Pride Parade coordination & active member of the Proud committee[cite: 1].</li>
+                        <li>Representing Indian culture on global corporate calls[cite: 1].</li>
+                        <li>Mental wellness initiatives & Yoga Day celebrations[cite: 1].</li>
+                        <li>Women's Day APAC empowerment programs[cite: 1].</li>
+                    </ul>
                 </div>
                 <div class="card">
-                    <h3>Green Initiatives</h3>
-                    <p>Driving sustainability-focused workplace campaigns and environmental drives across India[cite: 1].</p>
+                    <h3>🌱 Green & Eco Initiatives</h3>
+                    <ul>
+                        <li>Plantation drives & trekking events[cite: 1].</li>
+                        <li>Paper bag making workshops[cite: 1].</li>
+                        <li>Seedball making sessions[cite: 1].</li>
+                        <li>Bird feeder decoration activities[cite: 1].</li>
+                    </ul>
                 </div>
                 <div class="card">
-                    <h3>Social Impact Drives</h3>
-                    <p>Organizing blood donation camps, dignity kit distributions, and clothing donation drives[cite: 1].</p>
+                    <h3>🤝 Community Service</h3>
+                    <ul>
+                        <li>Donation in kind drives[cite: 1].</li>
+                        <li>Fundraisers for social welfare[cite: 1].</li>
+                        <li>Blood donation camps[cite: 1].</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- CORPORATE INITIATIVES SUB-SECTION -->
+        <section>
+            <h2>Corporate Culture & Wellness Initiatives</h2>
+            <div class="grid-3">
+                <div class="card">
+                    <h3>🎉 Celebrations & Festivities</h3>
+                    <ul>
+                        <li>Diwali & Holi parties (2025 & 2026)[cite: 1].</li>
+                        <li>Christmas celebrations & gifting[cite: 1].</li>
+                        <li>Republic Day & People & Culture Days[cite: 1].</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>🤝 Engagement & Connection</h3>
+                    <ul>
+                        <li>Friday Happy Hours: Games & All-India virtual calls[cite: 1].</li>
+                        <li>Mental Wellness Bingo challenges[cite: 1].</li>
+                        <li>P&C day cultural event hosting & coordination[cite: 1].</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>⚙️ Operations & Leadership</h3>
+                    <ul>
+                        <li>Leadership visits: Lunches, dinners & townhalls[cite: 1].</li>
+                        <li>Daily lunch facilitation & vendor management[cite: 1].</li>
+                        <li>Annual swag design & finalization[cite: 1].</li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -212,29 +291,29 @@
                 <div class="gallery-item">
                     <div class="image-placeholder">Photo Slot</div>
                     <div class="gallery-content">
-                        <h4>Festive Celebrations</h4>
-                        <p>Diwali, Christmas, Holi parties, and Republic Day activations[cite: 1].</p>
+                        <h4>Festive Parties & Celebrations</h4>
+                        <p>Diwali, Holi, Christmas, and Republic Day celebrations[cite: 1].</p>
                     </div>
                 </div>
                 <div class="gallery-item">
                     <div class="image-placeholder">Photo Slot</div>
                     <div class="gallery-content">
-                        <h4>Mental Wellness Month</h4>
-                        <p>Holistic health workshops, bingo challenges, and wellbeing sessions[cite: 1].</p>
+                        <h4>Mental Wellness & DEI</h4>
+                        <p>Yoga Day, Pride committee events, and wellness bingo challenges[cite: 1].</p>
                     </div>
                 </div>
                 <div class="gallery-item">
                     <div class="image-placeholder">Photo Slot</div>
                     <div class="gallery-content">
-                        <h4>Culture & Leadership Visits</h4>
-                        <p>Executive townhalls, networking lunches, and People & Culture days[cite: 1].</p>
+                        <h4>Green & Community Drives</h4>
+                        <p>Plantation drives, blood donation camps, and seedball workshops[cite: 1].</p>
                     </div>
                 </div>
                 <div class="gallery-item">
                     <div class="image-placeholder">Photo Slot</div>
                     <div class="gallery-content">
-                        <h4>Team Building & Happy Hours</h4>
-                        <p>Virtual all-India calls, gaming sessions, and regional bowling events[cite: 1].</p>
+                        <h4>Culture Days & Leadership Townhalls</h4>
+                        <p>Executive dinners, P&C events, and happy hour games[cite: 1].</p>
                     </div>
                 </div>
             </div>
